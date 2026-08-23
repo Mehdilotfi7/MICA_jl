@@ -1,0 +1,7 @@
+Response to Reviewers
+
+We thank the reviewers for their constructive comments. Below we address each point. In this first revision step we respond to Reviewer #1 Point 1 concerning systematic benchmarking.
+
+Reviewer #1 Point 1: The manuscript lacks quantitative comparison with alternative change point detection methods. While the authors mention limitations of existing approaches, no systematic benchmarking is provided.
+
+Response: We have added systematic benchmarking against standard change-point-detection methods on two complementary protocols: (i) nine synthetic toy instances generated from ODE, piecewise-linear (LR), and AR(1) models, and (ii) the 42-series Turing Change Point Dataset (TCPD) with 16 competitor algorithms. MICA-P and MICA-O both rank at the top in their respective categories, and the full comparison tables and figures are now included in the Results section. We have also clarified that competitor methods were run through the official R/Python packages and exact GitHub commits listed in the TCPD paper.

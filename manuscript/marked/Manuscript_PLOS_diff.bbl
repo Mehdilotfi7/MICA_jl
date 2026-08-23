@@ -1,0 +1,170 @@
+\begin{thebibliography}{10}
+
+\bibitem{page1954continuous}
+Page ES.
+\newblock Continuous inspection schemes.
+\newblock Biometrika. 1954;41(1/2):100-15.
+
+\bibitem{page1955test}
+Page E.
+\newblock A test for a change in a parameter occurring at an unknown point.
+\newblock Biometrika. 1955;42(3/4):523-7.
+
+\bibitem{truong2020selective}
+Truong C, Oudre L, Vayatis N.
+\newblock Selective review of offline change point detection methods.
+\newblock Signal Processing. 2020;167:107299.
+
+\bibitem{lee2024sequential}
+Lee Y, Kim S, Oh H.
+\newblock Sequential change-point detection in time series models with
+  conditional heteroscedasticity.
+\newblock Economics Letters. 2024;236:111597.
+
+\bibitem{ondrus2024fabisearch}
+Ondrus M, Cribben I.
+\newblock fabisearch: A package for change point detection in and visualization
+  of the network structure of multivariate high-dimensional time series in R.
+\newblock Neurocomputing. 2024;578:127321.
+
+\bibitem{OriginBinSeg}
+Scott AJ, Knott M.
+\newblock A cluster analysis method for grouping means in the analysis of
+  variance.
+\newblock Biometrics. 1974:507-12.
+
+\bibitem{gong2023latent}
+Gong Y, Dong X, Zhang J, Chen M.
+\newblock Latent evolution model for change point detection in time-varying
+  networks.
+\newblock Information Sciences. 2023;646:119376.
+
+\bibitem{cui2023state}
+Cui Y, Yang J, Zhou Z.
+\newblock State-domain change point detection for nonlinear time series
+  regression.
+\newblock Journal of Econometrics. 2023;234(1):3-27.
+
+\bibitem{shishavan2024unsupervised}
+Shishavan HH, Gossett E, Bi J, Henning R, Cherniack M, Kim I.
+\newblock Unsupervised Bayesian change point detection model to track acute
+  stress responses.
+\newblock Biomedical Signal Processing and Control. 2024;95:106415.
+
+\bibitem{janczura2023machine}
+Janczura J, Barszcz T, Zimroz R, Wy{\l}oma{\'n}ska A.
+\newblock Machine condition change detection based on data segmentation using a
+  three-regime, $\alpha$-stable Hidden Markov Model.
+\newblock Measurement. 2023;220:113399.
+
+\bibitem{dass2021data}
+Dass SC, Kwok WM, Gibson GJ, Gill BS, Sundram BM, Singh S.
+\newblock A data driven change-point epidemic model for assessing the impact of
+  large gathering and subsequent movement control order on COVID-19 spread in
+  Malaysia.
+\newblock PloS one. 2021;16(5):e0252136.
+
+\bibitem{gu2022bayesian}
+Gu J, Yin G.
+\newblock Bayesian SIR model with change points with application to the Omicron
+  wave in Singapore.
+\newblock Scientific Reports. 2022;12(1):20864.
+
+\bibitem{jiang2020bayessmiles}
+Jiang S, Zhou Q, Zhan X, Li Q.
+\newblock BayesSMILES: Bayesian segmentation modeling for longitudinal
+  epidemiological studies.
+\newblock Journal of Data Science. 2021;19(3):365-89.
+\newblock \href {http://dx.doi.org/10.6339/21-JDS1009}
+  {doi:10.6339/21-JDS1009}.
+
+\bibitem{vandenburg2020evaluation}
+{van den Burg} GJJ, Williams CKI.
+\newblock An Evaluation of Change Point Detection Algorithms.
+\newblock arXiv preprint arXiv:200306222. 2020.
+\newblock Available from: \url{https://arxiv.org/abs/2003.06222}.
+
+\bibitem{qiu2016applying}
+Qiu Y, Feng Y, Sun J, Zhang W, Infield D.
+\newblock Applying thermophysics for wind turbine drivetrain fault diagnosis
+  using SCADA data.
+\newblock IET Renewable Power Generation. 2016;10(5):661-8.
+
+\bibitem{letzgus2020change}
+Letzgus S.
+\newblock Change-point detection in wind turbine SCADA data for robust
+  condition monitoring with normal behaviour models.
+\newblock Wind Energy Science Discussions. 2020;2020:1-29.
+
+\bibitem{huang2023dynamic}
+Huang Y, Liu S, Chen H, Dai J, Wang X, Tao H.
+\newblock Dynamic behavior analysis method for the normal and faulty drivetrain
+  of wind turbine under multi-working conditions.
+\newblock Energy Science \& Engineering. 2023;11(10):3619-40.
+
+\bibitem{SCADA_Data}
+Effenberger N, Ludwig N.
+\newblock A collection and categorization of open-source wind and wind power
+  datasets.
+\newblock Wind Energy. 2022;25(10):1659-83.
+
+\bibitem{zhang2020scada}
+Zhang S, Lang ZQ.
+\newblock SCADA-data-based wind turbine fault detection: A dynamic model sensor
+  method.
+\newblock Control Engineering Practice. 2020;102:104546.
+
+\bibitem{aglen2003loss}
+Aglen O.
+\newblock Loss calculation and thermal analysis of a high-speed generator.
+\newblock In: IEEE International Electric Machines and Drives Conference, 2003.
+  IEMDC'03.. vol.~2. IEEE; 2003. p. 1117-23.
+
+\bibitem{esfandiari2010modeling}
+Esfandiari RS, Lu B.
+\newblock Modeling and analysis of dynamic systems.
+\newblock CRC press; 2010.
+
+\bibitem{tamura2012calculation}
+Tamura J.
+\newblock Calculation method of losses and efficiency of wind generators.
+\newblock Wind energy conversion systems: Technology and trends. 2012:25-51.
+
+\bibitem{shin2010energy}
+Shin D, Chung SW, Chung EY, Chang N.
+\newblock Energy-optimal dynamic thermal management: Computation and cooling
+  power co-optimization.
+\newblock IEEE Transactions on Industrial Informatics. 2010;6(3):340-51.
+
+\bibitem{scheffer2009early}
+Scheffer M, Bascompte J, Brock WA, Brovkin V, Carpenter SR, Dakos V, et~al.
+\newblock Early-warning signals for critical transitions.
+\newblock Nature. 2009;461(7260):53-9.
+\newblock \href {http://dx.doi.org/10.1038/nature08227}
+  {doi:10.1038/nature08227}.
+
+\bibitem{scheffer2012anticipating}
+Scheffer M, Carpenter SR, Lenton TM, Bascompte J, Brock W, Dakos V, et~al.
+\newblock Anticipating critical transitions.
+\newblock Science. 2012;338(6105):344-8.
+\newblock \href {http://dx.doi.org/10.1126/science.1225244}
+  {doi:10.1126/science.1225244}.
+
+\bibitem{chen2012detecting}
+Chen L, Liu R, Liu ZP, Li M, Aihara K.
+\newblock Detecting early-warning signals for sudden deterioration of complex
+  diseases by dynamical network biomarkers.
+\newblock Scientific Reports. 2012;2:342.
+\newblock \href {http://dx.doi.org/10.1038/srep00342} {doi:10.1038/srep00342}.
+
+\bibitem{mochaWebsite}
+Lotfi M, Kaderali L. Mica documentation; 2025.
+\newblock Accessed July 2025.
+\newblock \url{https://changepointdetection.com}.
+
+\bibitem{mochaGithub}
+Lotfi M, Kaderali L. Mica GitHub repository; 2025.
+\newblock Accessed July 2025.
+\newblock \url{https://github.com/Mehdilotfi7/Mica}.
+
+\end{thebibliography}

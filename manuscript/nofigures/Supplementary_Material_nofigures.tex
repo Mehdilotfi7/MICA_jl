@@ -1,0 +1,318 @@
+PassOptionsToPackage{draft}{graphicx}
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{rotating}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+% Prefix all supplementary tables and figures with S
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+
+\title{Supplementary Material for \\ MICA: A Model-Informed Change-point Analysis Framework}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{S1. Quantitative comparison with alternative CPD methods}
+
+This section reports the full Turing Change Point Detection (TCPD) benchmark used to compare MICA with the 15 published TCPD competitor algorithms plus an additional HMM-Regime baseline. All 42 datasets, the MICA runner, the extracted competitor tables, and the baseline implementations are archived in \texttt{MICA/benchmarking/TCPD/}.
+
+\subsection*{S1.1 Benchmark design}
+
+We evaluated MICA on the 42 univariate time series of the TCPD benchmark suite \cite{vandenburg2020evaluation}. MICA-O (oracle) selection reports the best F1 over all model, objective, penalty, and hyperparameter configurations per dataset, using the true labels to select the best configuration.
+
+For each dataset, MICA was run with the built-in regression, autoregressive, ETS, and difference-equation models listed in Table~\ref{tab:mica-models}, using the BIC-like penalty family described in the main manuscript. Baseline numbers for the 15 competitor methods reported in the original TCPD paper (AMOC, BinSeg, BOCPD, BOCPDMS, CPNP, ECP, KernelCPD, PELT, PROPHET, RBOCPDMS, RFPOP, SegNeigh, WBS, and the ZERO baseline) are taken from the extracted per-dataset tables in the original TCPD paper. In addition, we ran one non-TCPD baseline, HMM-Regime, using the official Python package \texttt{hmmlearn} (Gaussian hidden Markov model with diagonal covariance; number of states $K$ selected by an oracle grid over $\{2,3,4,5\}$).
+
+\clearpage
+
+\input{tcpd_benchmark_tables.tex}
+
+\subsection*{S1.2 The TCPD benchmark datasets}
+
+The Turing Change Point Dataset \cite{vandenburg2020evaluation} is a collection of real-world univariate time series assembled for evaluating offline change-point-detection algorithms. Each series was annotated by multiple human experts. The 42 series span several domains:
+\begin{itemize}
+    \item \textbf{Finance:} \texttt{bitcoin}, \texttt{ratner\_stock};
+    \item \textbf{Economics/demographics:} \texttt{gdp\_argentina}, \texttt{children\_per\_woman}, \allowbreak \texttt{us\_population};
+    \item \textbf{Environmental monitoring:} \texttt{co2\_canada}, \texttt{global\_co2}, \texttt{ozone};
+    \item \textbf{Transportation:} \texttt{jfk\_passengers}, \texttt{lga\_passengers}, \texttt{rail\_lines};
+    \item \textbf{Sports and logging:} \texttt{homeruns}, \texttt{run\_log};
+    \item \textbf{Quality control:} \texttt{quality\_control\_1}--\texttt{quality\_control\_5}.
+\end{itemize}
+
+Following the TCPD protocol, a detected change point is considered correct if it falls within a $\pm$5-day window of an annotated change point. Precision is computed against the union of all annotators, while recall is the macro-average over per-annotator ground-truth labels; the reported F1 score balances precision and recall.
+
+\subsection*{S1.3 Mean performance summary}
+
+The mean oracle F1 scores across all 42 datasets are summarized in Figure~12 and Table~2 of the main manuscript.
+
+\subsection*{S1.4 Per-dataset F1 scores}
+
+Table~S1 reports the per-dataset F1 scores under oracle selection. Missing or failed runs in the original TCPD tables are marked with ``---'' and counted as 0.0 when computing per-method means.
+
+\subsection*{S1.5 Best MICA configuration per dataset}
+
+Table~S2 lists the model, hyperparameter configuration, and F1 score for the best MICA-O run on each TCPD dataset. The ``Config'' column is encoded as \texttt{ms<min\_seg>\_s<step>}, i.e. minimum segment length and step size.
+
+\input{../../benchmarking/TCPD/Main_comprehensive_continuity_NelderMead/tcpd_best_config_summary.tex}
+
+\subsection*{S1.6 Qualitative comparison of methods}
+
+A qualitative comparison of MICA with representative state-of-the-art CPD methods is provided in the comparison table of the main manuscript.
+
+\subsection*{S1.7 Illustrative TCPD examples}
+
+Figure~S\ref{fig:tcpd-examples} shows six representative TCPD time series fitted with MICA. The panels were chosen to illustrate several of the model families used in the benchmark (debt-dynamics difference equations, AR(1), and multiplicative Holt--Winters ETS) and a range of change-point patterns. In each panel, the upper subplot shows the standardized observations (gray) and the fitted piecewise model (colored segments), with detected change points marked by dashed red vertical lines. The lower subplot shows the change points annotated by each human expert (black dots, one row per annotator). The panel title reports the dataset name, the model family, the MICA configuration (\texttt{ms<min\_seg>\_s<step>}), the symmetric $\pm$5-day F1 score, the number of detected change points (D), and the number of unique annotator change points (T).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{../figures/tcpd_examples_multipanel.pdf}
+\caption{Representative TCPD examples fitted with MICA. Each panel shows the standardized time series (gray), the fitted piecewise model (colored segments), detected change points (dashed red lines), and annotator change points (black dots). The title gives the dataset, model family, configuration, F1 score, number of detected change points (D), and number of unique annotator change points (T).}
+\label{fig:tcpd-examples}
+\end{figure}
+
+\section*{S2. Built-in segment models in \texttt{Mica.jl}}
+
+Table~\ref{tab:mica-models} lists the built-in univariate segment models currently available in the \texttt{Mica.jl} package. For each model the table gives its model family, a concise equation or description, and the parameter names used by the default setup.
+
+\input{../supplementary_mica_models.tex}
+
+\section*{S3. Synthetic toy-dataset benchmark}
+
+This section reports the oracle-only comparison of MICA with 15 competitor changepoint-detection algorithms on nine synthetic toy datasets.
+
+\subsection*{S3.1 Toy dataset generation}
+
+The nine datasets are generated from three model families, with one seed and three noise levels per family:
+\begin{itemize}
+    \item \textbf{ODE/SIR} ($n=163$): SIR model with recovery rate $\gamma=0.7$, segment-specific transmission rates $\beta\in\{0.00009,0.00014,0.00025\}$, true change points at $t=50$ and $t=100$, and uniform observation noise at levels 0, 10 and 20.
+    \item \textbf{Piecewise-linear regression (LR)} ($n=201$): continuous piecewise-linear signal with slopes $\{0.8,-0.5,1.2,-0.8,0.4\}$, change points at $t=40,80,120,160$, and Gaussian observation noise at levels 0, 5 and 10.
+    \item \textbf{AR(1)} ($n=300$): AR(1) process with autoregressive coefficients $\{0.0,0.9,-0.9\}$, change points at $t=100$ and $t=200$, and Gaussian observation noise at levels 0, 0.5 and 1.0.
+\end{itemize}
+
+The generators are implemented in \texttt{MICA/benchmarking/data/ode\_data\_generation.jl}, \texttt{lr\_data\_generation.jl}, and \texttt{ar\_data\_generation.jl}. The exported series are stored in \texttt{MICA/benchmarking/Toy/data/toy\_datasets.json}.
+
+\subsection*{S3.2 MICA settings}
+
+MICA was run directly through \texttt{Mica.jl} with the 19-objective TCPD-style penalty family described in the main text (\texttt{:bic}, \texttt{:mdl}, \texttt{:aic}, \texttt{:tcpd\_bic}, \texttt{:tcpd\_mbic}, \texttt{:tcpd\_aic}, \texttt{:tcpd\_hannan\_quinn}, \texttt{:tcpd\_sic}, \texttt{:tcpd\_none}, \texttt{:tcpd\_bic0}, \texttt{:tcpd\_aic0}, \texttt{:tcpd\_hannan\_quinn0}, \texttt{:wbs\_bic}, \texttt{:wbs\_mbic}, \texttt{:wbs\_ssic}, \texttt{:rfpop\_l1}, \texttt{:rfpop\_l2}, \texttt{:rfpop\_huber}, \texttt{:rfpop\_outlier}). The ODE model used the SIR solver with a genetic-algorithm optimizer. The LR model used the built-in \texttt{linear\_slope\_only} setup with \texttt{continuity=true}, so that the fitted piecewise-linear segments share the same continuity architecture as the data generator (each segment has its own slope and the level is propagated across changepoints). The AR model used the built-in \texttt{ar1\_nodrift} default setup, matching the zero-drift AR(1) process used to generate the AR toy data. For LR and AR, the changepoint grid was searched over the four combinations \texttt{min\_length/step} $=$ $(5,5)$, $(5,10)$, $(10,5)$ and $(10,10)$; ODE results used the single grid $(10,10)$. The oracle result (MICA-O-TCPD) selects, per dataset, the objective and grid with the highest F1 against the true labels.
+
+\subsection*{S3.3 Competitor settings}
+
+The 15 competitor algorithms were run through their reference R and Python packages with the oracle hyperparameter grids from van den Burg and Williams \cite{vandenburg2020evaluation}:
+\begin{itemize}
+    \item R \texttt{changepoint} package: AMOC, PELT, BinSeg, SegNeigh.
+    \item R \texttt{changepoint.np} package: CPNP.
+    \item R \texttt{robseg} package: RFPOP.
+    \item R \texttt{ecp} package: ECP and KernelCPD (KCPA).
+    \item R \texttt{wbs} package: WBS.
+    \item R \texttt{ocp} package: BOCPD.
+    \item Python reference implementations of BOCPDMS and RBOCPDMS from the original authors' GitHub repositories, cloned under \texttt{MICA/benchmarking/external/}.
+    \item Python \texttt{prophet} package: PROPHET.
+    \item Python \texttt{hmmlearn} package: HMM-Regime.
+    \item ZERO baseline: no changepoints.
+\end{itemize}
+
+All competitor methods were evaluated in oracle mode (best configuration per dataset selected by F1). The per-dataset F1 scores are reported in Table~S5.
+
+\input{toy_benchmark_tables.tex}
+
+\section*{S4. Wind-turbine penalty sensitivity: 15-change-point solution}
+
+The wind-turbine analysis in the main manuscript is reported with the BIC/MDL/AIC information criteria, all of which select four change points aligned with strong SCADA status events. Running the same model with the weaker empirical penalty used in the original submission ($\kappa=100$ in $\mathrm{pen}=\kappa p \log(n)$) produces a denser 15-change-point segmentation. Figure~S\ref{fig:turbine-15cp} and Table~S\ref{table:turbine-15cp-alignment} reproduce that original result for comparison. Several of the additional change points have weak or no correspondence in the SCADA status logs; they are therefore interpreted as over-segmentation artifacts rather than confirmed physical transitions.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{../figures/FigS_turbine_15cp.pdf}
+\caption{Original 15-change-point wind-turbine segmentation obtained with the weaker empirical penalty ($\kappa=100$). Top: observed generator temperatures (blue), MICA simulation (orange), and detected change points (green vertical lines). Bottom: relative shifts in segment-specific thermal parameters across segments.}
+\label{fig:turbine-15cp}
+\end{figure}
+
+\begin{table*}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|p{7cm}|}
+\hline
+\textbf{Change Point} & \textbf{Nearest Status Event} & \textbf{Alignment} & \textbf{Event Type} & \textbf{Description} \\
+\hline
+2021-01-01 16:30 & 2021-01-01 16:46 & Strong & Startup sequence & Change point closely precedes a full startup sequence, indicating a thermal transition as the turbine returns to operation. \\
+\hline
+2021-01-04 07:50 & 2021-01-03 22:20 & Weak & Data communication unavailable & No direct operational event; data communication issue recorded ~9 hours earlier. \\
+\hline
+2021-01-05 17:10 & 2021-01-06 23:04 & Weak & External stop and restart & Change point occurs more than 24 hours before an external stop/start cycle; not closely aligned. \\
+\hline
+2021-01-06 13:10 & 2021-01-06 23:04 & Weak & External stop and restart & Occurs ~10 hours before a stop/start cycle. Weak alignment. \\
+\hline
+2021-01-06 21:30 & 2021-01-06 23:04 & Moderate & External stop and restart & Occurs ~1.5 hours before turbine stop. Possible lead-in to shutdown. \\
+\hline
+2021-01-07 07:30 & 2021-01-07 01:43 & Moderate & Frequent external stops & Change point occurs during a dense period of operational cycling; moderate alignment with thermal dynamics. \\
+\hline
+2021-01-08 01:50 & 2021-01-08 03:27 & Moderate & External stop (low wind) & Change point occurs ~1.5 hours before shutdown. Potential early cooling anomaly. \\
+\hline
+2021-01-09 12:50 & 2021-01-09 16:26 & Weak & Run-up and cycling & Occurs ~3.5 hours before operational activity. Not directly aligned. \\
+\hline
+2021-01-10 03:50 & 2021-01-10 07:54 & Weak & Reset of icing condition & Occurs ~4 hours prior to icing status reset. Unclear linkage. \\
+\hline
+2021-01-10 12:10 & 2021-01-10 18:48 & Weak & Startup after icing & Occurs ~6.5 hours before restart. Weak alignment. \\
+\hline
+2021-01-10 18:50 & 2021-01-10 18:50 & Strong & Gearbox warm-up & Change point aligns exactly with turbine restart and gearbox warm-up sequence. \\
+\hline
+2021-01-11 04:50 & 2021-01-10 18:50 & Moderate & Extended operation & Follows a long stable run. Possible drift or thermal regime shift. \\
+\hline
+2021-01-12 12:30 & 2021-01-12 15:42 & Moderate & External stop (low wind) & Change point precedes external stop and restart cycle by ~3 hours. \\
+\hline
+2021-01-16 03:10 & 2021-01-15 15:30 & Weak & Multiple stops & Change point occurs during period of many external stops; no clear triggering event. \\
+\hline
+2021-01-18 01:50 & 2021-01-19 12:24 & Weak & Yaw and battery test & Occurs more than a day before status activity. No strong alignment. \\
+\hline
+\end{tabular}%
+}
+\caption{Alignment between the original 15 detected change points (weaker empirical penalty) and turbine status events.}
+\label{table:turbine-15cp-alignment}
+\end{table*}
+
+
+\section*{S5. Penalty and information-criterion families in \texttt{Mica.jl}}
+
+This section gives the exact formulas for the penalty and information-criterion families supported by \texttt{Mica.jl}. All criteria use the least-squares base term \(n \log(\widehat{\sigma}^2)\) with \(\widehat{\sigma}^2 = \max\{\mathrm{RSS}/n, 10^{-10}\}\), where RSS is the residual sum of squares returned by the user-supplied loss function. When variance scaling is enabled (the default), the penalty term is multiplied by the null-model variance \(\widehat{\sigma}^2_0 = \mathrm{RSS}_0/n\), i.e. the residual variance of a constant-mean model on the whole series, so that the objective is comparable across datasets with different scales.
+
+For the built-in criteria \texttt{:bic}, \texttt{:mdl}, and \texttt{:aic}, the total number of free parameters is
+\[
+p_{\mathrm{total}} = n_{\mathrm{global}} + n_{\mathrm{segments}} \, n_{\mathrm{segment-specific}} + n_{\mathrm{CP}},
+\]
+where \(n_{\mathrm{global}}\) counts non-segment-specific parameters, \(n_{\mathrm{segment-specific}}\) counts parameters estimated independently in each segment, \(n_{\mathrm{segments}} = n_{\mathrm{CP}} + 1\), and \(n_{\mathrm{CP}}\) counts the change-point locations.
+
+\subsection*{S5.1 Built-in information criteria}
+
+\begin{itemize}
+    \item \textbf{BIC:} \(\displaystyle n \log(\widehat{\sigma}^2) + \widehat{\sigma}^2_0 \, p_{\mathrm{total}} \log(n)\)
+    \item \textbf{MDL:} \(\displaystyle \frac{n}{2} \log(\widehat{\sigma}^2) + \widehat{\sigma}^2_0 \, \frac{p_{\mathrm{total}}}{2} \log(n)\)
+    \item \textbf{AIC:} \(\displaystyle n \log(\widehat{\sigma}^2) + 2 \, \widehat{\sigma}^2_0 \, p_{\mathrm{total}}\)
+\end{itemize}
+
+With \(\widehat{\sigma}^2_0 = 1\) (no scaling) these reduce to the standard BIC/MDL/AIC formulas.
+
+\subsection*{S5.2 TCPD-style penalties}
+
+These criteria mirror the reference packages used in the Turing Change Point Dataset benchmark. They count only the parameters introduced by a change, not one copy of every segment-specific parameter for every segment. Let \(d\) be the number of segment-specific parameters that change at a change point (for MICA this is \(n_{\mathrm{segment-specific}}\)), \(k = n_{\mathrm{CP}}\), and \(l_1, \dots, l_{k+1}\) be the segment lengths.
+
+\textbf{\texttt{changepoint} / \texttt{changepoint.np} family} (\texttt{:tcpd\_bic}, \texttt{:tcpd\_mbic}, \texttt{:tcpd\_aic}, \texttt{:tcpd\_hannan\_quinn}, \texttt{:tcpd\_sic}, \texttt{:tcpd\_none}, and the postfix-\texttt{0} variants):
+\begin{itemize}
+    \item BIC/SIC: \(\widehat{\sigma}^2_0 \, (d+1) \log(n)\)
+    \item MBIC: \(\widehat{\sigma}^2_0 \, (d+2) \log(n)\)
+    \item AIC: \(\widehat{\sigma}^2_0 \, 2(d+1)\)
+    \item Hannan--Quinn: \(\widehat{\sigma}^2_0 \, 2(d+1) \log(\log(n))\)
+    \item BIC0/SIC0: \(\widehat{\sigma}^2_0 \, d \log(n)\)
+    \item AIC0: \(\widehat{\sigma}^2_0 \, 2d\)
+    \item Hannan--Quinn0: \(\widehat{\sigma}^2_0 \, 2d \log(\log(n))\)
+    \item None: \(0\)
+\end{itemize}
+The base likelihood term is the standard least-squares BIC base \(n \log(\widehat{\sigma}^2)\).
+
+\textbf{WBS family} (\texttt{:wbs\_bic}, \texttt{:wbs\_mbic}, \texttt{:wbs\_ssic}):
+\begin{itemize}
+    \item BIC: \(\widehat{\sigma}^2_0 \, k \log(n)\)
+    \item MBIC: \(\widehat{\sigma}^2_0 \, \left[1.5 \, k \log(n) + 0.5 \sum_i \log(l_i/n)\right]\)
+    \item SSIC: \(\widehat{\sigma}^2_0 \, k \, (\log(n))^{\alpha}\), default \(\alpha = 1.01\)
+\end{itemize}
+The WBS base term is \((n/2) \log(\widehat{\sigma}^2)\).
+
+\textbf{RFPOP raw per-change penalty} (\texttt{:rfpop\_l1}, \texttt{:rfpop\_l2}, \texttt{:rfpop\_huber}, \texttt{:rfpop\_outlier}):
+\[
+\mathrm{objective} = \mathrm{RSS} + \lambda \, k,
+\]
+where the default \(\lambda\) values follow the TCPD reference implementation: \(\lambda = \log(n)\) for L1 and L2, \(\lambda = 1.4 \log(n)\) for Huber, and \(\lambda = 2 \log(n)\) for the outlier loss.
+
+\subsection*{S5.3 User-defined and legacy penalties}
+
+Users may supply an arbitrary penalty function of the segment-specific parameter count \(p\), the data length \(n\), the change-point vector, segment lengths, and/or the number of segments. The legacy empirical penalty used in the original synthetic SIR experiments and in the COVID-19/wind-turbine sensitivity analyses is
+\[
+\mathrm{pen} = \kappa \, p \, \log(n),
+\]
+where \(p\) was originally the number of segment-specific parameters only. This is retained as an optional sensitivity knob and is not equivalent to the principled BIC/MDL/AIC criteria.
+
+\section*{S6. COVID-19 random change-point baseline}
+
+To verify that the BIC-selected change points are not an artifact of overfitting, we compared the MICA BIC solution with a random change-point baseline. Keeping the same model, loss, and scaling as the main-text BIC analysis, we drew random change-point sets of size 2--8 and re-optimized the segment-specific parameters. The best 8-change-point random baseline (indices 30, 50, 110, 210, 250, 260, 340, 370) achieved a total loss of 2018.76, more than twice the MICA BIC loss of 870.31 with only two change points. Figure~S\ref{fig:random-cp-comparison} compares the MICA BIC reference (left) with the best random 8-change-point baseline (right). The random breakpoints fail to capture the two main epidemic waves and produce visibly poorer fits, especially during the first wave and the winter surge. This confirms that the information-criterion-driven segmentation identifies meaningful regime transitions rather than fitting noise.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{../figures/FigS_random_cp_comparison.pdf}
+\caption{Random change-point baseline for the COVID-19 Germany model. (a) MICA BIC solution with two change points (indices 60 and 150; loss 870.31). (b) Best random 8-change-point baseline (indices 30, 50, 110, 210, 250, 260, 340, 370; loss 2018.76). Both panels show observed data (blue) and the fitted model (orange) on the raw count scale; red dashed vertical lines mark change points.}
+\label{fig:random-cp-comparison}
+\end{figure}
+
+\section*{S7. Identifiability and uncertainty quantification}
+
+We assessed parameter identifiability and uncertainty for the COVID-19 Germany model through two complementary analyses: a structural-identifiability study of a rational simplification of the baseline SEIRD model, and a profile-likelihood analysis of the BIC-selected two-change-point solution.
+
+\subsection*{S7.1 Structural identifiability}
+
+We used \texttt{StructuralIdentifiability.jl} (\url{https://github.com/SciML/StructuralIdentifiability.jl})~\cite{liyanage2026tutorial}, a Julia package implementing the differential-elimination approach of Dong et al.~\cite{dong2023differential} and building on the probabilistic algorithm of Sedoglavic~\cite{sedoglavic2002probabilistic} and the theory of identifiability for nonlinear ODE models~\cite{miao2011identifiability}. It was applied to a polynomial/rational simplification of the 11-compartment SEIRD model used for the COVID-19 analysis. The simplification removes the sinusoidal seasonality term and assumes a constant vaccination rate, because the full model contains non-polynomial (transcendental) terms that are outside the scope of exact structural-identifiability algorithms. All 16 unknown parameters of the simplified model, together with the five observed outputs (cases, hospitalizations, ICU occupancy, deaths, and cumulative vaccinations) and all unobserved state variables, were found to be \emph{globally identifiable} from the assumed observations (Figure~S\ref{fig:si-covid}). Thus, parameter non-identifiability in the full model is a finite-sample/numerical issue rather than a fundamental structural one.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{../figures/FigS_covid_structural_identifiability}
+\caption{Structural-identifiability assessment of the rational simplification of the baseline COVID-19 SEIRD model (no seasonality, constant vaccination rate). All 16 unknown parameters are globally identifiable from the five assumed observations (cases, hospitalizations, ICU occupancy, deaths, and cumulative vaccinations).}
+\label{fig:si-covid}
+\end{figure}
+
+\subsection*{S7.2 Practical identifiability via the Fisher information matrix}
+
+A local sensitivity analysis around the best eight-change-point fit (Task~E) confirmed that practical identifiability is poor for the full segmented model. The condition number of the Gauss-Newton approximation $J^{\top}J$ of the Fisher information matrix exceeded $10^{307}$, indicating that many parameter combinations produce nearly identical model outputs. The least identifiable directions were dominated by the segment-specific vaccination-rate parameters $\nu_{\text{seg}i}$; several transition probabilities also had very small sensitivity norms. This aligns with the structural result: while every parameter is theoretically identifiable, the available 400-day, five-channel data set does not provide enough information to estimate all 80 free parameters of the richly segmented model reliably.
+
+\subsection*{S7.3 Profile-likelihood confidence intervals}
+
+We used \texttt{BreakpointProfiles.jl} to compute likelihood-profile confidence intervals for the parameters and change-point locations of the BIC-selected two-change-point solution (change points at indices 60 and 150). The change-point detection was run with an L2 (RMSE) loss and the BIC penalty. The PLE reference fit was then re-optimised under the same L2 loss with a 10-start hybrid GA+LBFGS search; profiles were traced with Nelder-Mead and an adaptive step-out procedure in the style of Data2Dynamics (d2d; \url{https://github.com/Data2Dynamics/d2d})~\cite{raue2015data2dynamics,raue2013lessons}, using a $\chi^2_{1}$ threshold of $\Delta\text{loss} \le 3.8415$ (95\% CI). This gives a consistent Gaussian likelihood interpretation for both detection and uncertainty quantification. The conditional profiles treat the two change points as fixed at their detected values while each parameter is varied; the change-point profiles (Figure~S\ref{fig:ple-covid}) treat each change point as the varied quantity and re-optimise all parameters.
+
+Of the 32 parameters profiled (8 global + 24 segment-specific), 17 were practically identifiable in the conditional profiles: 3 global parameters ($\epsilon_0$, $\gamma_3$, $\omega$) and 14 segment-specific parameters, including the transmission probabilities $\hat{p}_1$ and scaled transmission rates $\hat{\beta}$ in all three segments. The two change points were both identifiable. Change point 1 (day 60) is pinned tightly to $[60, 60]$; change point 2 (day 150) has profile interval $[146, 150]$. The narrowness of the second interval reflects the step~$=10$ candidate grid used during change-point detection: the continuous likelihood minimum lies near day 148--149, but the reported CP is the nearest grid point at day 150, so the CI is computed relative to that grid-detected reference. The remaining parameters hit either lower or upper bounds, indicating that the data do not constrain them independently given the assumed model structure. This is consistent with the Fisher-information analysis and supports the main-text caveat that detected change points should be interpreted as the best segmentation under the assumed model and criterion, not as independently confirmed structural breaks.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.99\textwidth]{../figures/FigS_covid_ple_profiles}
+\caption{Conditional profile-likelihood curves for all 32 parameters and the two change-point locations of the COVID-19 Germany BIC two-change-point solution. Blue curves are PCHIP-smoothed profile losses; horizontal dashed red lines mark the 95\% $\chi^2_1$ threshold; green dashed lines mark the best-fit value; gold shading shows the approximate 95\% confidence interval; orange dotted lines show the interval bounds. ``Y'' and ``N'' in each panel title indicate whether both bounds were reached inside the inspected range. The change-point panels report intervals relative to the grid-detected reference CPs at days 60 and 150 (change-point search step $=10$).}
+\label{fig:ple-covid}
+\end{figure}
+
+\subsection*{S7.4 True-joint profile-likelihood analysis}
+
+As a sensitivity check we also ran a true-joint PLE in which the two change points were treated as free parameters during both the reference re-optimisation and the profiling of every model parameter. The reference fit was improved from an initial loss of 1601.62 to 1594.28; after re-profiling with this improved reference, 12 of the 32 parameters were practically identifiable. The joint change-point profiles remained tight (day~60: $[60,60]$; day~150: $[146,150]$), confirming that the detected transition dates are robust to whether the change points are fixed or co-estimated during uncertainty quantification. Figure~S\ref{fig:ple-covid-joint} shows the joint PLE curves.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.99\textwidth]{../figures/FigS_covid_joint_ple_profiles}
+\caption{True-joint profile-likelihood curves for all 32 parameters and the two change-point locations of the COVID-19 Germany BIC two-change-point solution. In contrast to the conditional profiles (Figure~S\ref{fig:ple-covid}), the change points are treated as free parameters during both reference optimisation and parameter profiling. Layout and colour coding are as in Figure~S\ref{fig:ple-covid}.}
+\label{fig:ple-covid-joint}
+\end{figure}
+
+\subsection*{S7.5 Wind-turbine profile-likelihood confidence intervals}
+
+We applied the same L2-loss, BIC-selected model and conditional PLE pipeline to the wind-turbine four-change-point solution (change points at indices 140, 500, 1150 and 1860). The reference fit was re-optimised with a 20-start hybrid GA+LBFGS search and profiles were traced with Nelder-Mead, using the same Data2Dynamics-style adaptive step-out and a $\chi^2_{1}$ threshold of $\Delta\text{loss} \le 3.8415$ (95\% CI). Of the 23 model parameters (4 global + 19 segment-specific), 12 were practically identifiable. All four change points were identifiable: CP~1 $[133,140]$, CP~2 $[493,501]$, CP~3 $[1150,1157]$, CP~4 $[1860,1867]$. The profiles are shown in Figure~S\ref{fig:ple-turbine}.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.99\textwidth]{../figures/FigS_turbine_ple_profiles}
+\caption{Conditional profile-likelihood curves for all 23 parameters and the four change-point locations of the wind-turbine BIC/MDL/AIC four-change-point solution. Layout and colour coding are as in Figure~S\ref{fig:ple-covid}.}
+\label{fig:ple-turbine}
+\end{figure}
+
+\bibliographystyle{plos2025}
+\bibliography{references}
+
+\end{document}
