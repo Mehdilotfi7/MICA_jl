@@ -1,0 +1,7 @@
+/docs/build/
+/docs/Manifest.toml
+/examples/covid_ple_output/
+*.log
+*.pyc
+__pycache__/
+.DS_Store

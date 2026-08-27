@@ -1,0 +1,57 @@
+\begin{table}[htbp]
+\centering
+\caption{Best MICA configuration per TCPD dataset.}
+\label{tab:tcpd-best-configs}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+Dataset & \multicolumn{3}{c}{MICA-O (oracle)} & \multicolumn{3}{c}{MICA-P (practical)} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+ & Model & Config & F1 & Model & Config & F1 \\
+\midrule
+\texttt{apple} & \texttt{ar1} & \texttt{ms31\_s6} & 0.919 & \texttt{ar1} & \texttt{ms20\_s6} & 0.904\\
+\texttt{bank} & \texttt{ar3} & \texttt{ms19\_s5} & 1.000 & \texttt{mean} & \texttt{ms19\_s5} & 1.000\\
+\texttt{bee\_waggle\_6} & \texttt{ar1} & \texttt{ms30\_s12} & 0.667 & \texttt{accelerator} & \texttt{ms30\_s12} & 0.333\\
+\texttt{bitcoin} & \texttt{ar1} & \texttt{ms25\_s7} & 0.490 & \texttt{cubic} & \texttt{ms25\_s38} & 0.447\\
+\texttt{brent\_spot} & \texttt{power} & \texttt{ms25\_s10} & 0.396 & \texttt{accelerator} & \texttt{ms16\_s25} & 0.362\\
+\texttt{businv} & \texttt{ets\_mmm} & \texttt{ms11\_s16} & 0.545 & \texttt{weibull\_growth} & \texttt{ms16\_s3} & 0.545\\
+\texttt{centralia} & \texttt{ar1} & \texttt{ms5\_s1} & 0.759 & \texttt{log\_linear} & \texttt{ms5\_s1} & 0.759\\
+\texttt{children\_per\_woman} & \texttt{cubic} & \texttt{ms10\_s15} & 0.710 & \texttt{cubic} & \texttt{ms10\_s15} & 0.710\\
+\texttt{co2\_canada} & \texttt{accelerator} & \texttt{ms7\_s2} & 0.827 & \texttt{accelerator} & \texttt{ms7\_s2} & 0.827\\
+\texttt{construction} & \texttt{log\_logistic} & \texttt{ms10\_s6} & 0.857 & \texttt{log\_logistic} & \texttt{ms10\_s6} & 0.857\\
+\texttt{debt\_ireland} & \texttt{ar1} & \texttt{ms5\_s1} & 0.947 & \texttt{linear} & \texttt{ms5\_s1} & 0.947\\
+\texttt{gdp\_argentina} & \texttt{compound\_growth} & \texttt{ms5\_s1} & 1.000 & \texttt{compound\_growth} & \texttt{ms5\_s1} & 1.000\\
+\texttt{gdp\_croatia} & \texttt{cubic} & \texttt{ms5\_s1} & 1.000 & \texttt{linear} & \texttt{ms5\_s1} & 1.000\\
+\texttt{gdp\_iran} & \texttt{ets\_mmm} & \texttt{ms5\_s1} & 0.957 & \texttt{linear} & \texttt{ms5\_s1} & 0.800\\
+\texttt{gdp\_japan} & \texttt{ar1} & \texttt{ms5\_s2} & 1.000 & \texttt{quadratic} & \texttt{ms5\_s1} & 1.000\\
+\texttt{global\_co2} & \texttt{linear} & \texttt{ms5\_s1} & 0.800 & \texttt{linear} & \texttt{ms5\_s1} & 0.800\\
+\texttt{homeruns} & \texttt{accelerator} & \texttt{ms11\_s5} & 0.756 & \texttt{accelerator} & \texttt{ms11\_s5} & 0.756\\
+\texttt{iceland\_tourism} & \texttt{rational} & \texttt{ms19\_s9} & 1.000 & \texttt{rational} & \texttt{ms6\_s3} & 1.000\\
+\texttt{jfk\_passengers} & \texttt{ar3} & \texttt{ms23\_s23} & 0.857 & \texttt{linear} & \texttt{ms23\_s23} & 0.857\\
+\texttt{lga\_passengers} & \texttt{ar1} & \texttt{ms15\_s9} & 0.478 & \texttt{ar1} & \texttt{ms15\_s4} & 0.419\\
+\texttt{measles} & \texttt{poisson} & \texttt{ms49\_s19} & 1.000 & \texttt{mean} & \texttt{ms33\_s9} & 0.000\\
+\texttt{nile} & \texttt{ar3} & \texttt{ms5\_s5} & 1.000 & \texttt{ar1} & \texttt{ms5\_s1} & 1.000\\
+\texttt{occupancy} & \texttt{ar1} & \texttt{ms25\_s5} & 0.780 & \texttt{accelerator} & \texttt{ms16\_s10} & 0.671\\
+\texttt{ozone} & \texttt{accelerator} & \texttt{ms5\_s1} & 1.000 & \texttt{accelerator} & \texttt{ms5\_s2} & 1.000\\
+\texttt{quality\_control\_1} & \texttt{accelerator} & \texttt{ms15\_s3} & 1.000 & \texttt{accelerator} & \texttt{ms10\_s3} & 0.500\\
+\texttt{quality\_control\_2} & \texttt{ar3} & \texttt{ms9\_s5} & 1.000 & \texttt{ar1} & \texttt{ms9\_s2} & 1.000\\
+\texttt{quality\_control\_3} & \texttt{ar2} & \texttt{ms18\_s7} & 1.000 & \texttt{ar1} & \texttt{ms12\_s3} & 1.000\\
+\texttt{quality\_control\_4} & \texttt{quadratic} & \texttt{ms16\_s25} & 0.857 & \texttt{quadratic} & \texttt{ms16\_s25} & 0.857\\
+\texttt{quality\_control\_5} & \texttt{cubic} & \texttt{ms10\_s3} & 1.000 & \texttt{mean} & \texttt{ms10\_s3} & 1.000\\
+\texttt{rail\_lines} & \texttt{mean\_drift} & \texttt{ms5\_s1} & 0.857 & \texttt{linear} & \texttt{ms5\_s1} & 0.857\\
+\texttt{ratner\_stock} & \texttt{ar3} & \texttt{ms30\_s12} & 0.667 & \texttt{accelerator} & \texttt{ms20\_s6} & 0.667\\
+\texttt{robocalls} & \texttt{ar1} & \texttt{ms5\_s1} & 0.857 & \texttt{ar1} & \texttt{ms5\_s1} & 0.857\\
+\texttt{run\_log} & \texttt{accelerator} & \texttt{ms12\_s3} & 0.756 & \texttt{accelerator} & \texttt{ms12\_s3} & 0.756\\
+\texttt{scanline\_126007} & \texttt{accelerator} & \texttt{ms16\_s4} & 0.820 & \texttt{accelerator} & \texttt{ms16\_s4} & 0.820\\
+\texttt{scanline\_42049} & \texttt{accelerator} & \texttt{ms16\_s4} & 0.829 & \texttt{accelerator} & \texttt{ms16\_s4} & 0.829\\
+\texttt{seatbelts} & \texttt{ar1} & \texttt{ms9\_s1} & 0.772 & \texttt{debt\_dynamics} & \texttt{ms9\_s1} & 0.772\\
+\texttt{shanghai\_license} & \texttt{ar3} & \texttt{ms6\_s4} & 0.947 & \texttt{quadratic} & \texttt{ms6\_s2} & 0.947\\
+\texttt{uk\_coal\_employ} & \texttt{accelerator} & \texttt{ms5\_s2} & 0.743 & \texttt{accelerator} & \texttt{ms5\_s2} & 0.743\\
+\texttt{unemployment\_nl} & \texttt{ar1} & \texttt{ms10\_s10} & 0.817 & \texttt{ar1} & \texttt{ms10\_s10} & 0.817\\
+\texttt{us\_population} & \texttt{accelerator} & \texttt{ms27\_s8} & 1.000 & \texttt{accelerator} & \texttt{ms27\_s8} & 0.400\\
+\texttt{usd\_isk} & \texttt{debt\_dynamics} & \texttt{ms12\_s12} & 0.812 & \texttt{debt\_dynamics} & \texttt{ms12\_s12} & 0.812\\
+\texttt{well\_log} & \texttt{ar2} & \texttt{ms22\_s6} & 0.595 & \texttt{ar1} & \texttt{ms22\_s6} & 0.522\\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

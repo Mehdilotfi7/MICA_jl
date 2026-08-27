@@ -1,0 +1,60 @@
+[
+  {
+    "method": "HMM-Regime",
+    "f1": 0.16666666666666669,
+    "precision": 0.1,
+    "recall": 0.5,
+    "covering": 0.8711656441717791,
+    "cps": [
+      19,
+      29,
+      39,
+      49,
+      59,
+      69,
+      79,
+      120,
+      130,
+      140
+    ],
+    "K": 3,
+    "config": "default",
+    "model": "ODE",
+    "seed": 1,
+    "noise_level": 10.0,
+    "n": 163,
+    "true_cps": [
+      50,
+      100
+    ]
+  },
+  {
+    "method": "HMM-Regime",
+    "f1": 0.16666666666666669,
+    "precision": 0.1,
+    "recall": 0.5,
+    "covering": 0.8711656441717791,
+    "cps": [
+      19,
+      29,
+      39,
+      49,
+      59,
+      69,
+      79,
+      120,
+      130,
+      140
+    ],
+    "K": 3,
+    "config": "oracle",
+    "model": "ODE",
+    "seed": 1,
+    "noise_level": 10.0,
+    "n": 163,
+    "true_cps": [
+      50,
+      100
+    ]
+  }
+]

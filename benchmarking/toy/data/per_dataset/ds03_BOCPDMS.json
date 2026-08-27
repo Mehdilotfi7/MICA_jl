@@ -1,0 +1,45 @@
+[
+  {
+    "method": "BOCPDMS",
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "covering": 0.0,
+    "cps": [],
+    "config": "default",
+    "model": "LR",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 201,
+    "true_cps": [
+      40,
+      80,
+      120,
+      160
+    ]
+  },
+  {
+    "method": "BOCPDMS",
+    "f1": 0.25,
+    "precision": 0.25,
+    "recall": 0.25,
+    "covering": 0.5671641791044776,
+    "cps": [
+      1,
+      2,
+      39,
+      166
+    ],
+    "config": "oracle",
+    "model": "LR",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 201,
+    "true_cps": [
+      40,
+      80,
+      120,
+      160
+    ]
+  }
+]

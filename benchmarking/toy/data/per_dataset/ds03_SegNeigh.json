@@ -1,0 +1,58 @@
+[
+  {
+    "method": "SegNeigh",
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "covering": 0.0,
+    "cps": [],
+    "config": "default",
+    "model": "LR",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 201,
+    "true_cps": [
+      40,
+      80,
+      120,
+      160
+    ]
+  },
+  {
+    "method": "SegNeigh",
+    "f1": 0.38095238095238093,
+    "precision": 0.23529411764705882,
+    "recall": 1.0,
+    "covering": 0.9303482587064676,
+    "cps": [
+      12,
+      26,
+      37,
+      47,
+      62,
+      75,
+      84,
+      95,
+      107,
+      117,
+      126,
+      141,
+      156,
+      167,
+      179,
+      189,
+      196
+    ],
+    "config": "oracle",
+    "model": "LR",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 201,
+    "true_cps": [
+      40,
+      80,
+      120,
+      160
+    ]
+  }
+]

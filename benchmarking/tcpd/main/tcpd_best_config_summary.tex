@@ -1,0 +1,49 @@
+\begin{table}[htbp]
+\centering
+\caption{Best MICA-O (oracle) configuration per TCPD dataset.}
+\label{tab:tcpd-best-configs}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccc}
+\toprule
+Dataset & Model & Config & F1 \\
+\midrule
+bank & cubic & ms1\_s1 & 1.000 \\
+brent\_spot & accelerator & ms2\_s5 & 0.439 \\
+businv & ets\_mmm & ms1\_s1 & 0.545 \\
+centralia & compound\_growth & ms1\_s1 & 0.941 \\
+children\_per\_woman & cubic & ms10\_s15 & 0.710 \\
+co2\_canada & accelerator & ms2\_s1 & 0.827 \\
+construction & ets\_mmm & ms1\_s6 & 0.857 \\
+debt\_ireland & compound\_growth & ms1\_s1 & 1.000 \\
+gdp\_argentina & compound\_growth & ms5\_s1 & 1.000 \\
+gdp\_croatia & cubic & ms1\_s1 & 1.000 \\
+gdp\_iran & ets\_mmm & ms1\_s1 & 0.957 \\
+gdp\_japan & quadratic & ms1\_s1 & 1.000 \\
+global\_co2 & accelerator & ms3\_s5 & 1.000 \\
+homeruns & debt\_dynamics & ms3\_s5 & 0.796 \\
+iceland\_tourism & rational & ms3\_s3 & 1.000 \\
+jfk\_passengers & hill\_function & ms2\_s23 & 0.857 \\
+lga\_passengers & ar1 & ms2\_s4 & 0.514 \\
+nile & ar3 & ms3\_s1 & 1.000 \\
+occupancy & accelerator & ms2\_s5 & 0.805 \\
+ozone & accelerator & ms2\_s1 & 1.000 \\
+quality\_control\_1 & accelerator & ms2\_s1 & 1.000 \\
+quality\_control\_2 & ar2 & ms2\_s1 & 1.000 \\
+quality\_control\_3 & ar1 & ms1\_s3 & 1.000 \\
+quality\_control\_4 & quadratic & ms2\_s5 & 0.857 \\
+quality\_control\_5 & ar3 & ms3\_s1 & 1.000 \\
+rail\_lines & linear & ms5\_s1 & 0.857 \\
+ratner\_stock & accelerator & ms3\_s6 & 0.947 \\
+robocalls & debt\_dynamics & ms1\_s1 & 0.857 \\
+run\_log & ar1 & ms7\_s7 & 0.843 \\
+scanline\_126007 & accelerator & ms16\_s4 & 0.820 \\
+scanline\_42049 & accelerator & ms2\_s9 & 0.898 \\
+seatbelts & ar1 & ms3\_s9 & 0.957 \\
+shanghai\_license & quadratic & ms1\_s1 & 0.947 \\
+uk\_coal\_employ & accelerator & ms2\_s2 & 0.743 \\
+unemployment\_nl & accelerator & ms2\_s4 & 0.860 \\
+usd\_isk & debt\_dynamics & ms2\_s4 & 0.909 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

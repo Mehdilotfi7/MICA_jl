@@ -1,0 +1,51 @@
+[
+  {
+    "method": "CPNP",
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "covering": 0.0,
+    "cps": [],
+    "config": "default",
+    "model": "ODE",
+    "seed": 1,
+    "noise_level": 10.0,
+    "n": 163,
+    "true_cps": [
+      50,
+      100
+    ]
+  },
+  {
+    "method": "CPNP",
+    "f1": 0.125,
+    "precision": 0.07142857142857142,
+    "recall": 0.5,
+    "covering": 0.8895705521472392,
+    "cps": [
+      11,
+      21,
+      28,
+      33,
+      37,
+      42,
+      55,
+      67,
+      73,
+      84,
+      113,
+      121,
+      140,
+      153
+    ],
+    "config": "oracle",
+    "model": "ODE",
+    "seed": 1,
+    "noise_level": 10.0,
+    "n": 163,
+    "true_cps": [
+      50,
+      100
+    ]
+  }
+]

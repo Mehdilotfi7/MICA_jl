@@ -1,0 +1,51 @@
+[
+  {
+    "cps": [
+      290
+    ],
+    "log_transform": true,
+    "n_cps": 1,
+    "setting": "log_equal",
+    "time_seconds": 312.25427985191345,
+    "weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "cps": [
+      340,
+      370
+    ],
+    "log_transform": false,
+    "n_cps": 2,
+    "setting": "raw_equal",
+    "time_seconds": 293.454628944397,
+    "weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  {
+    "cps": [
+      250
+    ],
+    "log_transform": true,
+    "n_cps": 1,
+    "setting": "log_weighted",
+    "time_seconds": 294.12995409965515,
+    "weights": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.2
+    ]
+  }
+]

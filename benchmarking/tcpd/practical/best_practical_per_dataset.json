@@ -1,0 +1,422 @@
+{
+  "apple": {
+    "tcpd_default": "wbs_mbic",
+    "model": "ar1",
+    "f1": 0.9189189189189189,
+    "cps": [
+      200,
+      317
+    ]
+  },
+  "construction": {
+    "tcpd_default": "wbs_ssic",
+    "model": "ets_mmm",
+    "f1": 0.8571428571428571,
+    "cps": [
+      195,
+      200
+    ]
+  },
+  "debt_ireland": {
+    "tcpd_default": "changepoint_mbic",
+    "model": "linear",
+    "f1": 1.0,
+    "cps": [
+      7,
+      12,
+      14,
+      16,
+      19
+    ]
+  },
+  "gdp_argentina": {
+    "tcpd_default": "wbs_ssic",
+    "model": "poisson",
+    "f1": 0.8571428571428571,
+    "cps": [
+      17,
+      29,
+      42,
+      54
+    ]
+  },
+  "gdp_croatia": {
+    "tcpd_default": "rfpop_outlier",
+    "model": "linear",
+    "f1": 1.0,
+    "cps": [
+      13
+    ]
+  },
+  "gdp_iran": {
+    "tcpd_default": "changepoint_mbic",
+    "model": "exponential",
+    "f1": 1.0,
+    "cps": [
+      12,
+      15,
+      23,
+      27,
+      30
+    ]
+  },
+  "gdp_japan": {
+    "tcpd_default": "rfpop_l2",
+    "model": "quadratic",
+    "f1": 1.0,
+    "cps": [
+      34
+    ]
+  },
+  "global_co2": {
+    "tcpd_default": "changepoint_mbic",
+    "model": "linear",
+    "f1": 0.6666666666666666,
+    "cps": [
+      44,
+      77,
+      81,
+      93
+    ]
+  },
+  "homeruns": {
+    "tcpd_default": "ecp_style_min30",
+    "model": "debt_dynamics",
+    "f1": 0.7956989247311829,
+    "cps": [
+      64
+    ]
+  },
+  "iceland_tourism": {
+    "tcpd_default": "ecp_style_min30",
+    "model": "rational",
+    "f1": 1.0,
+    "cps": [
+      168
+    ]
+  },
+  "jfk_passengers": {
+    "tcpd_default": "wbs_ssic",
+    "model": "log_linear",
+    "f1": 0.8571428571428571,
+    "cps": [
+      297
+    ]
+  },
+  "bank": {
+    "tcpd_default": "wbs_ssic",
+    "model": "mean",
+    "f1": 1.0,
+    "cps": []
+  },
+  "lga_passengers": {
+    "tcpd_default": "changepoint_mbic",
+    "model": "ar1",
+    "f1": 0.5903814262023217,
+    "cps": [
+      85,
+      170,
+      257,
+      295,
+      299,
+      421
+    ]
+  },
+  "measles": {
+    "tcpd_default": "wbs_ssic",
+    "model": "ar1",
+    "f1": 0.6666666666666666,
+    "cps": [
+      146,
+      170
+    ]
+  },
+  "nile": {
+    "tcpd_default": "ecp_style_min30",
+    "model": "mean",
+    "f1": 1.0,
+    "cps": [
+      32
+    ]
+  },
+  "occupancy": {
+    "tcpd_default": "wbs_ssic",
+    "model": "ar1",
+    "f1": 0.7159533073929961,
+    "cps": [
+      92,
+      240,
+      265,
+      419,
+      451
+    ]
+  },
+  "ozone": {
+    "tcpd_default": "wbs_mbic",
+    "model": "quadratic",
+    "f1": 1.0,
+    "cps": [
+      14,
+      28
+    ]
+  },
+  "quality_control_1": {
+    "tcpd_default": "wbs_ssic",
+    "model": "compound_growth",
+    "f1": 0.6666666666666666,
+    "cps": [
+      2,
+      143
+    ]
+  },
+  "quality_control_2": {
+    "tcpd_default": "wbs_ssic",
+    "model": "ar1",
+    "f1": 1.0,
+    "cps": [
+      96
+    ]
+  },
+  "quality_control_3": {
+    "tcpd_default": "wbs_ssic",
+    "model": "ar1",
+    "f1": 1.0,
+    "cps": [
+      178
+    ]
+  },
+  "quality_control_4": {
+    "tcpd_default": "ecp_style_min30",
+    "model": "ar2",
+    "f1": 0.8250000000000001,
+    "cps": [
+      154,
+      286,
+      340,
+      467
+    ]
+  },
+  "quality_control_5": {
+    "tcpd_default": "wbs_ssic",
+    "model": "mean",
+    "f1": 1.0,
+    "cps": []
+  },
+  "bee_waggle_6": {
+    "tcpd_default": "wbs_ssic",
+    "model": "linear",
+    "f1": 0.16666666666666669,
+    "cps": [
+      73,
+      135,
+      181,
+      212,
+      278,
+      368,
+      426,
+      461,
+      538,
+      586
+    ]
+  },
+  "rail_lines": {
+    "tcpd_default": "changepoint_mbic",
+    "model": "cubic",
+    "f1": 1.0,
+    "cps": [
+      14,
+      23,
+      28
+    ]
+  },
+  "ratner_stock": {
+    "tcpd_default": "ecp_style_min30",
+    "model": "accelerator",
+    "f1": 0.5714285714285715,
+    "cps": [
+      210,
+      270,
+      300
+    ]
+  },
+  "robocalls": {
+    "tcpd_default": "changepoint_mbic",
+    "model": "debt_dynamics",
+    "f1": 0.888888888888889,
+    "cps": [
+      6,
+      13,
+      22,
+      33,
+      42
+    ]
+  },
+  "run_log": {
+    "tcpd_default": "rfpop_huber",
+    "model": "ar1",
+    "f1": 0.6542056074766355,
+    "cps": [
+      59,
+      174,
+      202,
+      316
+    ]
+  },
+  "scanline_126007": {
+    "tcpd_default": "wbs_ssic",
+    "model": "log_linear",
+    "f1": 0.7862068965517242,
+    "cps": [
+      247,
+      395
+    ]
+  },
+  "scanline_42049": {
+    "tcpd_default": "wbs_ssic",
+    "model": "ar1",
+    "f1": 0.7676056338028169,
+    "cps": [
+      54,
+      76,
+      184,
+      273
+    ]
+  },
+  "seatbelts": {
+    "tcpd_default": "rfpop_l2",
+    "model": "ar1",
+    "f1": 0.7719298245614035,
+    "cps": [
+      46,
+      59,
+      168
+    ]
+  },
+  "shanghai_license": {
+    "tcpd_default": "wbs_ssic",
+    "model": "quadratic",
+    "f1": 0.9473684210526316,
+    "cps": [
+      142
+    ]
+  },
+  "uk_coal_employ": {
+    "tcpd_default": "changepoint_mbic",
+    "model": "debt_dynamics",
+    "f1": 0.8990825688073394,
+    "cps": [
+      10,
+      18,
+      44,
+      67,
+      77
+    ]
+  },
+  "unemployment_nl": {
+    "tcpd_default": "changepoint_mbic",
+    "model": "ar1",
+    "f1": 0.8169014084507042,
+    "cps": [
+      129,
+      139,
+      177
+    ]
+  },
+  "bitcoin": {
+    "tcpd_default": "changepoint_mbic",
+    "model": "linear",
+    "f1": 0.5511811023622047,
+    "cps": [
+      376,
+      511,
+      555,
+      579,
+      596,
+      616,
+      685,
+      696,
+      716,
+      743,
+      755
+    ]
+  },
+  "us_population": {
+    "tcpd_default": "changepoint_mbic",
+    "model": "cubic",
+    "f1": 1.0,
+    "cps": [
+      465
+    ]
+  },
+  "usd_isk": {
+    "tcpd_default": "wbs_mbic",
+    "model": "ar1",
+    "f1": 0.7755102040816326,
+    "cps": [
+      36,
+      116
+    ]
+  },
+  "well_log": {
+    "tcpd_default": "wbs_mbic",
+    "model": "ar1",
+    "f1": 0.6514423076923077,
+    "cps": [
+      179,
+      280,
+      310,
+      461,
+      463
+    ]
+  },
+  "brent_spot": {
+    "tcpd_default": "ecp_style_min30",
+    "model": "accelerator",
+    "f1": 0.32303063457330417,
+    "cps": [
+      138,
+      275,
+      377,
+      452
+    ]
+  },
+  "businv": {
+    "tcpd_default": "wbs_ssic",
+    "model": "mean_drift",
+    "f1": 0.6818181818181817,
+    "cps": [
+      165,
+      200,
+      216,
+      220
+    ]
+  },
+  "centralia": {
+    "tcpd_default": "changepoint_mbic",
+    "model": "log_linear",
+    "f1": 1.0,
+    "cps": [
+      3,
+      5,
+      7
+    ]
+  },
+  "children_per_woman": {
+    "tcpd_default": "rfpop_outlier",
+    "model": "michaelis_menten",
+    "f1": 0.7096774193548387,
+    "cps": [
+      142
+    ]
+  },
+  "co2_canada": {
+    "tcpd_default": "ecp_style_min30",
+    "model": "log_linear",
+    "f1": 0.6988847583643123,
+    "cps": [
+      77,
+      107,
+      152
+    ]
+  }
+}

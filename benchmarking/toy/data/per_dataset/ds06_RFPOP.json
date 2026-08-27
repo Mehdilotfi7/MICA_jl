@@ -1,0 +1,50 @@
+[
+  {
+    "method": "RFPOP",
+    "f1": 0.4,
+    "precision": 0.25,
+    "recall": 1.0,
+    "covering": 0.99,
+    "cps": [
+      98,
+      107,
+      118,
+      152,
+      159,
+      165,
+      193,
+      199
+    ],
+    "config": "default",
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 300,
+    "true_cps": [
+      100,
+      200
+    ]
+  },
+  {
+    "method": "RFPOP",
+    "f1": 0.6666666666666666,
+    "precision": 0.5,
+    "recall": 1.0,
+    "covering": 0.9866666666666667,
+    "cps": [
+      96,
+      113,
+      168,
+      200
+    ],
+    "config": "oracle",
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 300,
+    "true_cps": [
+      100,
+      200
+    ]
+  }
+]

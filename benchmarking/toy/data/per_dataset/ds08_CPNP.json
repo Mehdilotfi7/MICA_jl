@@ -1,0 +1,43 @@
+[
+  {
+    "method": "CPNP",
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "covering": 0.0,
+    "cps": [],
+    "config": "default",
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 1.0,
+    "n": 300,
+    "true_cps": [
+      100,
+      200
+    ]
+  },
+  {
+    "method": "CPNP",
+    "f1": 0.5,
+    "precision": 0.3333333333333333,
+    "recall": 1.0,
+    "covering": 0.9933333333333333,
+    "cps": [
+      99,
+      113,
+      156,
+      167,
+      195,
+      199
+    ],
+    "config": "oracle",
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 1.0,
+    "n": 300,
+    "true_cps": [
+      100,
+      200
+    ]
+  }
+]

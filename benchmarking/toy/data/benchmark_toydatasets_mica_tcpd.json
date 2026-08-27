@@ -1,0 +1,509 @@
+[
+  {
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 300,
+    "true_cps": [
+      100.0,
+      200.0
+    ],
+    "method": "MICA-O-TCPD",
+    "config": "oracle",
+    "objective": "aic",
+    "min_length": 10,
+    "step": 10,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "covering": 1.0,
+    "cps": [
+      100,
+      200
+    ],
+    "obj_value": 435.1384325811031
+  },
+  {
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 300,
+    "true_cps": [
+      100.0,
+      200.0
+    ],
+    "method": "MICA-P-TCPD",
+    "config": "default",
+    "objective": "tcpd_aic0",
+    "min_length": 10,
+    "step": 5,
+    "f1": 0.14814814814814814,
+    "precision": 0.08,
+    "recall": 1.0,
+    "covering": 1.0,
+    "cps": [
+      15,
+      25,
+      35,
+      45,
+      55,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      135,
+      145,
+      155,
+      165,
+      175,
+      185,
+      200,
+      210,
+      220,
+      230,
+      245,
+      255,
+      265,
+      280
+    ],
+    "obj_value": 349.2962140787185
+  },
+  {
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 0.5,
+    "n": 300,
+    "true_cps": [
+      100.0,
+      200.0
+    ],
+    "method": "MICA-O-TCPD",
+    "config": "oracle",
+    "objective": "aic",
+    "min_length": 10,
+    "step": 10,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "covering": 1.0,
+    "cps": [
+      100,
+      200
+    ],
+    "obj_value": 480.17125028365155
+  },
+  {
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 0.5,
+    "n": 300,
+    "true_cps": [
+      100.0,
+      200.0
+    ],
+    "method": "MICA-P-TCPD",
+    "config": "default",
+    "objective": "tcpd_aic0",
+    "min_length": 10,
+    "step": 5,
+    "f1": 0.14814814814814814,
+    "precision": 0.08,
+    "recall": 1.0,
+    "covering": 1.0,
+    "cps": [
+      15,
+      25,
+      35,
+      45,
+      60,
+      70,
+      80,
+      90,
+      100,
+      110,
+      120,
+      130,
+      140,
+      150,
+      165,
+      175,
+      185,
+      200,
+      210,
+      225,
+      240,
+      250,
+      260,
+      270,
+      280
+    ],
+    "obj_value": 383.23687394896456
+  },
+  {
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 1.0,
+    "n": 300,
+    "true_cps": [
+      100.0,
+      200.0
+    ],
+    "method": "MICA-O-TCPD",
+    "config": "oracle",
+    "objective": "rfpop_outlier",
+    "min_length": 10,
+    "step": 10,
+    "f1": 0.8,
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "covering": 1.0,
+    "cps": [
+      100,
+      120,
+      200
+    ],
+    "obj_value": 675.5928622239968
+  },
+  {
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 1.0,
+    "n": 300,
+    "true_cps": [
+      100.0,
+      200.0
+    ],
+    "method": "MICA-P-TCPD",
+    "config": "default",
+    "objective": "rfpop_l1",
+    "min_length": 10,
+    "step": 10,
+    "f1": 0.2666666666666667,
+    "precision": 0.15384615384615385,
+    "recall": 1.0,
+    "covering": 1.0,
+    "cps": [
+      20,
+      40,
+      50,
+      70,
+      100,
+      120,
+      130,
+      150,
+      160,
+      170,
+      190,
+      200,
+      250
+    ],
+    "obj_value": 602.1658813978811
+  },
+  {
+    "model": "LR",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 201,
+    "true_cps": [
+      40.0,
+      80.0,
+      120.0,
+      160.0
+    ],
+    "method": "MICA-O-TCPD",
+    "config": "oracle",
+    "objective": "rfpop_outlier",
+    "min_length": 5,
+    "step": 5,
+    "f1": 0.6666666666666666,
+    "precision": 1.0,
+    "recall": 0.5,
+    "covering": 0.6019900497512438,
+    "cps": [
+      40,
+      160
+    ],
+    "obj_value": 23829.616576105105
+  },
+  {
+    "model": "LR",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 201,
+    "true_cps": [
+      40.0,
+      80.0,
+      120.0,
+      160.0
+    ],
+    "method": "MICA-P-TCPD",
+    "config": "default",
+    "objective": "tcpd_aic0",
+    "min_length": 5,
+    "step": 10,
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "covering": 0.5522388059701493,
+    "cps": [
+      25,
+      65,
+      180,
+      185
+    ],
+    "obj_value": 19915.565359441047
+  },
+  {
+    "model": "LR",
+    "seed": 1,
+    "noise_level": 5.0,
+    "n": 201,
+    "true_cps": [
+      40.0,
+      80.0,
+      120.0,
+      160.0
+    ],
+    "method": "MICA-O-TCPD",
+    "config": "oracle",
+    "objective": "rfpop_huber",
+    "min_length": 5,
+    "step": 10,
+    "f1": 0.6666666666666666,
+    "precision": 1.0,
+    "recall": 0.5,
+    "covering": 0.6019900497512438,
+    "cps": [
+      45,
+      120
+    ],
+    "obj_value": 26562.736531869086
+  },
+  {
+    "model": "LR",
+    "seed": 1,
+    "noise_level": 5.0,
+    "n": 201,
+    "true_cps": [
+      40.0,
+      80.0,
+      120.0,
+      160.0
+    ],
+    "method": "MICA-P-TCPD",
+    "config": "default",
+    "objective": "tcpd_hannan_quinn0",
+    "min_length": 10,
+    "step": 5,
+    "f1": 0.3333333333333333,
+    "precision": 0.5,
+    "recall": 0.25,
+    "covering": 0.5771144278606966,
+    "cps": [
+      35,
+      145
+    ],
+    "obj_value": 22188.75852008901
+  },
+  {
+    "model": "LR",
+    "seed": 1,
+    "noise_level": 10.0,
+    "n": 201,
+    "true_cps": [
+      40.0,
+      80.0,
+      120.0,
+      160.0
+    ],
+    "method": "MICA-O-TCPD",
+    "config": "oracle",
+    "objective": "tcpd_bic0",
+    "min_length": 10,
+    "step": 5,
+    "f1": 0.8571428571428571,
+    "precision": 1.0,
+    "recall": 0.75,
+    "covering": 0.7761194029850746,
+    "cps": [
+      40,
+      120,
+      155
+    ],
+    "obj_value": 38474.4734206063
+  },
+  {
+    "model": "LR",
+    "seed": 1,
+    "noise_level": 10.0,
+    "n": 201,
+    "true_cps": [
+      40.0,
+      80.0,
+      120.0,
+      160.0
+    ],
+    "method": "MICA-P-TCPD",
+    "config": "default",
+    "objective": "tcpd_mbic",
+    "min_length": 10,
+    "step": 5,
+    "f1": 0.25,
+    "precision": 0.25,
+    "recall": 0.25,
+    "covering": 0.7014925373134329,
+    "cps": [
+      30,
+      115,
+      150,
+      190
+    ],
+    "obj_value": 36164.76449406962
+  },
+  {
+    "model": "ODE",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 163,
+    "true_cps": [
+      50.0,
+      100.0
+    ],
+    "method": "MICA-O-TCPD",
+    "config": "oracle",
+    "objective": "rfpop_l1",
+    "min_length": 10,
+    "step": 10,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "covering": 1.0,
+    "cps": [
+      50,
+      100
+    ],
+    "obj_value": 184.70855590291455
+  },
+  {
+    "model": "ODE",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 163,
+    "true_cps": [
+      50.0,
+      100.0
+    ],
+    "method": "MICA-P-TCPD",
+    "config": "default",
+    "objective": "tcpd_mbic",
+    "min_length": 10,
+    "step": 10,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "covering": 1.0,
+    "cps": [
+      50,
+      100
+    ],
+    "obj_value": 148.35019302671182
+  },
+  {
+    "model": "ODE",
+    "seed": 1,
+    "noise_level": 10.0,
+    "n": 163,
+    "true_cps": [
+      50.0,
+      100.0
+    ],
+    "method": "MICA-O-TCPD",
+    "config": "oracle",
+    "objective": "rfpop_huber",
+    "min_length": 10,
+    "step": 10,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "covering": 1.0,
+    "cps": [
+      50,
+      100
+    ],
+    "obj_value": 209.83827017011797
+  },
+  {
+    "model": "ODE",
+    "seed": 1,
+    "noise_level": 10.0,
+    "n": 163,
+    "true_cps": [
+      50.0,
+      100.0
+    ],
+    "method": "MICA-P-TCPD",
+    "config": "default",
+    "objective": "rfpop_huber",
+    "min_length": 10,
+    "step": 10,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "covering": 1.0,
+    "cps": [
+      50,
+      100
+    ],
+    "obj_value": 209.83827017011797
+  },
+  {
+    "model": "ODE",
+    "seed": 1,
+    "noise_level": 20.0,
+    "n": 163,
+    "true_cps": [
+      50.0,
+      100.0
+    ],
+    "method": "MICA-O-TCPD",
+    "config": "oracle",
+    "objective": "rfpop_l1",
+    "min_length": 10,
+    "step": 10,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "covering": 1.0,
+    "cps": [
+      50,
+      100
+    ],
+    "obj_value": 312.1660794076914
+  },
+  {
+    "model": "ODE",
+    "seed": 1,
+    "noise_level": 20.0,
+    "n": 163,
+    "true_cps": [
+      50.0,
+      100.0
+    ],
+    "method": "MICA-P-TCPD",
+    "config": "default",
+    "objective": "rfpop_l2",
+    "min_length": 10,
+    "step": 10,
+    "f1": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "covering": 1.0,
+    "cps": [
+      50,
+      100
+    ],
+    "obj_value": 293.8270751749202
+  }
+]

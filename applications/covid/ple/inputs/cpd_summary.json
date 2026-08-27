@@ -1,0 +1,34 @@
+{
+  "cps": [
+    60,
+    150
+  ],
+  "data_indices": [
+    5,
+    6,
+    7,
+    9,
+    11
+  ],
+  "error": null,
+  "ga_settings": {
+    "crossover": "SBX(0.7, 1)",
+    "crossoverRate": 0.7,
+    "iterations": 1000,
+    "min_length": 10,
+    "mutation": "gaussian(0.0001)",
+    "mutationRate": 0.7,
+    "populationSize": 150,
+    "selection": "tournament(2)",
+    "step": 10
+  },
+  "loss": 513.010536000869,
+  "min_length": 10,
+  "n_cps": 2,
+  "objective": "bic",
+  "penalty_label": "bic",
+  "raw_loss": 866.7203715598123,
+  "seed": 1234,
+  "step": 10,
+  "time_seconds": 3695.993750810623
+}

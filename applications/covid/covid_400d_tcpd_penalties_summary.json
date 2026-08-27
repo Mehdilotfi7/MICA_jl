@@ -1,0 +1,284 @@
+[
+  {
+    "penalty_label": "aic",
+    "objective": "aic",
+    "n_cps": 0,
+    "cps": [],
+    "loss": 886.8621145389493,
+    "raw_loss": 3390.117408177205,
+    "time_seconds": 3721.0133860111237
+  },
+  {
+    "penalty_label": "bic",
+    "objective": "bic",
+    "n_cps": 0,
+    "cps": [],
+    "loss": 950.725547292677,
+    "raw_loss": 3390.117408177205,
+    "time_seconds": 3733.4788241386414
+  },
+  {
+    "penalty_label": "mdl",
+    "objective": "mdl",
+    "n_cps": 0,
+    "cps": [],
+    "loss": 475.3627736463385,
+    "raw_loss": 3390.117408177205,
+    "time_seconds": 3710.7192800045013
+  },
+  {
+    "penalty_label": "rfpop_huber",
+    "objective": "rfpop_huber",
+    "n_cps": 5,
+    "cps": [
+      60,
+      110,
+      150,
+      260,
+      320
+    ],
+    "loss": 825.0509023995638,
+    "raw_loss": 783.110650569808,
+    "time_seconds": 14301.058153152466
+  },
+  {
+    "penalty_label": "rfpop_l1",
+    "objective": "rfpop_l1",
+    "n_cps": 8,
+    "cps": [
+      40,
+      50,
+      60,
+      70,
+      110,
+      150,
+      260,
+      320
+    ],
+    "loss": 760.2137698235317,
+    "raw_loss": 712.2820534466679,
+    "time_seconds": 15306.22447514534
+  },
+  {
+    "penalty_label": "rfpop_l2",
+    "objective": "rfpop_l2",
+    "n_cps": 8,
+    "cps": [
+      40,
+      50,
+      60,
+      70,
+      110,
+      150,
+      260,
+      320
+    ],
+    "loss": 760.2137698235317,
+    "raw_loss": 712.2820534466679,
+    "time_seconds": 15288.924793958664
+  },
+  {
+    "penalty_label": "rfpop_outlier",
+    "objective": "rfpop_outlier",
+    "n_cps": 5,
+    "cps": [
+      60,
+      110,
+      150,
+      260,
+      320
+    ],
+    "loss": 843.0252960408877,
+    "raw_loss": 783.110650569808,
+    "time_seconds": 14581.49922299385
+  },
+  {
+    "penalty_label": "tcpd_aic",
+    "objective": "tcpd_aic",
+    "n_cps": 8,
+    "cps": [
+      40,
+      60,
+      80,
+      120,
+      150,
+      260,
+      290,
+      320
+    ],
+    "loss": 241.4924285249165,
+    "raw_loss": 699.3809722362616,
+    "time_seconds": 16336.001303195953
+  },
+  {
+    "penalty_label": "tcpd_aic0",
+    "objective": "tcpd_aic0",
+    "n_cps": 8,
+    "cps": [
+      40,
+      60,
+      80,
+      120,
+      150,
+      260,
+      290,
+      320
+    ],
+    "loss": 239.4924285249165,
+    "raw_loss": 699.3809722362616,
+    "time_seconds": 16167.563572883606
+  },
+  {
+    "penalty_label": "tcpd_bic",
+    "objective": "tcpd_bic",
+    "n_cps": 8,
+    "cps": [
+      40,
+      60,
+      80,
+      120,
+      150,
+      260,
+      290,
+      320
+    ],
+    "loss": 277.41560944888835,
+    "raw_loss": 699.3809722362616,
+    "time_seconds": 16265.571084976196
+  },
+  {
+    "penalty_label": "tcpd_bic0",
+    "objective": "tcpd_bic0",
+    "n_cps": 8,
+    "cps": [
+      40,
+      60,
+      80,
+      120,
+      150,
+      260,
+      290,
+      320
+    ],
+    "loss": 271.4241449017804,
+    "raw_loss": 699.3809722362616,
+    "time_seconds": 16362.723266839981
+  },
+  {
+    "penalty_label": "tcpd_hannan_quinn",
+    "objective": "tcpd_hannan_quinn",
+    "n_cps": 8,
+    "cps": [
+      40,
+      60,
+      80,
+      120,
+      150,
+      260,
+      290,
+      320
+    ],
+    "loss": 255.7184743815646,
+    "raw_loss": 699.3809722362616,
+    "time_seconds": 16165.643278121948
+  },
+  {
+    "penalty_label": "tcpd_hannan_quinn0",
+    "objective": "tcpd_hannan_quinn0",
+    "n_cps": 8,
+    "cps": [
+      40,
+      60,
+      80,
+      120,
+      150,
+      260,
+      290,
+      320
+    ],
+    "loss": 252.13780261971482,
+    "raw_loss": 699.3809722362616,
+    "time_seconds": 16250.912833213806
+  },
+  {
+    "penalty_label": "tcpd_mbic",
+    "objective": "tcpd_mbic",
+    "n_cps": 8,
+    "cps": [
+      40,
+      60,
+      80,
+      120,
+      150,
+      260,
+      290,
+      320
+    ],
+    "loss": 283.4070739959963,
+    "raw_loss": 699.3809722362616,
+    "time_seconds": 16283.060193061829
+  },
+  {
+    "penalty_label": "tcpd_none",
+    "objective": "tcpd_none",
+    "n_cps": 8,
+    "cps": [
+      40,
+      60,
+      80,
+      120,
+      150,
+      260,
+      290,
+      320
+    ],
+    "loss": 223.4924285249165,
+    "raw_loss": 699.3809722362616,
+    "time_seconds": 16052.71956896782
+  },
+  {
+    "penalty_label": "tcpd_sic",
+    "objective": "tcpd_sic",
+    "n_cps": 8,
+    "cps": [
+      40,
+      60,
+      80,
+      120,
+      150,
+      260,
+      290,
+      320
+    ],
+    "loss": 277.41560944888835,
+    "raw_loss": 699.3809722362616,
+    "time_seconds": 16233.136735200882
+  },
+  {
+    "penalty_label": "wbs_bic",
+    "objective": "wbs_bic",
+    "n_cps": 0,
+    "cps": [],
+    "loss": 427.43105726947465,
+    "raw_loss": 3390.117408177205,
+    "time_seconds": 3732.8200380802155
+  },
+  {
+    "penalty_label": "wbs_mbic",
+    "objective": "wbs_mbic",
+    "n_cps": 0,
+    "cps": [],
+    "loss": 427.43105726947465,
+    "raw_loss": 3390.117408177205,
+    "time_seconds": 3713.275323152542
+  },
+  {
+    "penalty_label": "wbs_ssic",
+    "objective": "wbs_ssic",
+    "n_cps": 0,
+    "cps": [],
+    "loss": 427.43105726947465,
+    "raw_loss": 3390.117408177205,
+    "time_seconds": 3700.5573410987854
+  }
+]

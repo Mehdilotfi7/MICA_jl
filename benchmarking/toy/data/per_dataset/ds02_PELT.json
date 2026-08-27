@@ -1,0 +1,41 @@
+[
+  {
+    "method": "PELT",
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "covering": 0.0,
+    "cps": [],
+    "config": "default",
+    "model": "ODE",
+    "seed": 1,
+    "noise_level": 20.0,
+    "n": 163,
+    "true_cps": [
+      50,
+      100
+    ]
+  },
+  {
+    "method": "PELT",
+    "f1": 0.3333333333333333,
+    "precision": 0.25,
+    "recall": 0.5,
+    "covering": 0.7668711656441718,
+    "cps": [
+      27,
+      45,
+      55,
+      67
+    ],
+    "config": "oracle",
+    "model": "ODE",
+    "seed": 1,
+    "noise_level": 20.0,
+    "n": 163,
+    "true_cps": [
+      50,
+      100
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "method": "PROPHET",
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "covering": 0.0,
+    "cps": [],
+    "config": "default",
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 1.0,
+    "n": 300,
+    "true_cps": [
+      100,
+      200
+    ]
+  },
+  {
+    "method": "PROPHET",
+    "f1": 0.3076923076923077,
+    "precision": 0.18181818181818182,
+    "recall": 1.0,
+    "covering": 0.98,
+    "cps": [
+      23,
+      34,
+      45,
+      91,
+      102,
+      125,
+      136,
+      159,
+      170,
+      204,
+      216
+    ],
+    "config": "oracle",
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 1.0,
+    "n": 300,
+    "true_cps": [
+      100,
+      200
+    ]
+  }
+]

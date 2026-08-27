@@ -1,0 +1,82 @@
+DESCRIPTION
+COVID-19 SEIRD baseline model (no changepoints) for D2D profile-likelihood.
+11 states, 16 fitted parameters.
+Seasonality and vaccination are included as time-dependent terms.
+Smooth positive parts keep all compartments non-negative during integration.
+
+PREDICTOR
+t	T	"d"	"time"	0	400
+
+COMPARTMENTS
+
+STATES
+Susceptible	C	"#"	"susceptible"
+Exposed0	C	"#"	"exposed_stage_0"
+Exposed1	C	"#"	"exposed_stage_1"
+Infected0	C	"#"	"infected_stage_0"
+Infected1	C	"#"	"infected_stage_1"
+Infected2	C	"#"	"infected_stage_2"
+Infected3	C	"#"	"infected_stage_3"
+Recovered	C	"#"	"recovered"
+Dead		C	"#"	"dead"
+CumCases	C	"#"	"cumulative_cases"
+Vaccinated	C	"#"	"cumulative_vaccinated"
+
+INPUTS
+
+ODES
+"-(effective_beta * Susceptible_pos * (Exposed1_pos + Infected0_pos + Infected1_pos)) / N_pos + omega * Recovered_pos - vacc_rate * Susceptible_pos"
+"(effective_beta * Susceptible_pos * (Exposed1_pos + Infected0_pos + Infected1_pos)) / N_pos - eps0 * Exposed0_pos"
+"eps0 * Exposed0_pos - eps1 * Exposed1_pos"
+"(1 - p1) * eps1 * Exposed1_pos - gamma0 * Infected0_pos"
+"p1 * eps1 * Exposed1_pos - gamma1 * Infected1_pos"
+"p12 * gamma1 * Infected1_pos - gamma2 * Infected2_pos"
+"p23 * gamma2 * Infected2_pos - gamma3 * Infected3_pos"
+"gamma0 * Infected0_pos + (1 - p12 - p1D) * gamma1 * Infected1_pos + (1 - p23 - p2D) * gamma2 * Infected2_pos + (1 - p3D) * gamma3 * Infected3_pos - omega * Recovered_pos + vacc_rate * Susceptible_pos"
+"p1D * gamma1 * Infected1_pos + p2D * gamma2 * Infected2_pos + p3D * gamma3 * Infected3_pos"
+"p1 * eps1 * Exposed1_pos"
+"vacc_rate * Susceptible_pos"
+
+DERIVED
+Susceptible_pos	C	"#"	"positive_susceptible"	"0.5 * (Susceptible + sqrt(Susceptible^2 + 1e-6))"
+Exposed0_pos	C	"#"	"positive_exposed0"	"0.5 * (Exposed0 + sqrt(Exposed0^2 + 1e-6))"
+Exposed1_pos	C	"#"	"positive_exposed1"	"0.5 * (Exposed1 + sqrt(Exposed1^2 + 1e-6))"
+Infected0_pos	C	"#"	"positive_infected0"	"0.5 * (Infected0 + sqrt(Infected0^2 + 1e-6))"
+Infected1_pos	C	"#"	"positive_infected1"	"0.5 * (Infected1 + sqrt(Infected1^2 + 1e-6))"
+Infected2_pos	C	"#"	"positive_infected2"	"0.5 * (Infected2 + sqrt(Infected2^2 + 1e-6))"
+Infected3_pos	C	"#"	"positive_infected3"	"0.5 * (Infected3 + sqrt(Infected3^2 + 1e-6))"
+Recovered_pos	C	"#"	"positive_recovered"	"0.5 * (Recovered + sqrt(Recovered^2 + 1e-6))"
+Dead_pos	C	"#"	"positive_dead"		"0.5 * (Dead + sqrt(Dead^2 + 1e-6))"
+CumCases_pos	C	"#"	"positive_cumcases"	"0.5 * (CumCases + sqrt(CumCases^2 + 1e-6))"
+Vaccinated_pos	C	"#"	"positive_vaccinated"	"0.5 * (Vaccinated + sqrt(Vaccinated^2 + 1e-6))"
+N_pos		C	"#"	"positive_total_pop"	"Susceptible_pos + Exposed0_pos + Exposed1_pos + Infected0_pos + Infected1_pos + Infected2_pos + Infected3_pos + Recovered_pos + Dead_pos"
+season		C	"#"	"seasonality"		"1 + delta * cos(2 * 3.141592653589793 * t / 365)"
+effective_beta	C	"#"	"effective_beta"	"beta_val * season"
+vacc_rate	C	"#"	"vaccination_rate"	"nu * (0.5 + 0.5 * tanh((t - 330) / 10.0))"
+
+OBSERVABLES
+log_infected		C	"log10(cases+1)"	"obs"	0	0	"log10(CumCases_pos + 1)"
+log_hospitalized	C	"log10(hosp+1)"	"obs"	0	0	"log10(Infected1_pos + 1)"
+log_icu			C	"log10(icu+1)"	"obs"	0	0	"log10(Infected2_pos + 1)"
+log_death		C	"log10(deaths+1)"	"obs"	0	0	"log10(Dead_pos + 1)"
+log_vaccinated		C	"log10(vacc+1)"	"obs"	0	0	"log10(Vaccinated_pos + 1)"
+
+ERRORS
+log_infected		"sd_cases"
+log_hospitalized	"sd_hosp"
+log_icu			"sd_icu"
+log_death		"sd_death"
+log_vaccinated		"sd_vacc"
+
+CONDITIONS
+init_Susceptible	"83129284"
+init_Exposed0		"1"
+init_Exposed1		"0"
+init_Infected0		"0"
+init_Infected1		"0"
+init_Infected2		"0"
+init_Infected3		"0"
+init_Recovered		"0"
+init_Dead		"0"
+init_CumCases		"0"
+init_Vaccinated		"0"

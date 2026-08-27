@@ -1,0 +1,57 @@
+[
+  {
+    "method": "CPNP",
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "covering": 0.0,
+    "cps": [],
+    "config": "default",
+    "model": "LR",
+    "seed": 1,
+    "noise_level": 5.0,
+    "n": 201,
+    "true_cps": [
+      40,
+      80,
+      120,
+      160
+    ]
+  },
+  {
+    "method": "CPNP",
+    "f1": 0.4,
+    "precision": 0.25,
+    "recall": 1.0,
+    "covering": 0.9502487562189055,
+    "cps": [
+      4,
+      23,
+      35,
+      48,
+      63,
+      74,
+      81,
+      87,
+      97,
+      110,
+      116,
+      118,
+      132,
+      143,
+      162,
+      174
+    ],
+    "config": "oracle",
+    "model": "LR",
+    "seed": 1,
+    "noise_level": 5.0,
+    "n": 201,
+    "true_cps": [
+      40,
+      80,
+      120,
+      160
+    ]
+  }
+]

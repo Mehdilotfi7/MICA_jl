@@ -1,0 +1,13 @@
+*.jl.*.cov
+*.jl.cov
+*.jl.mem
+/docs/Manifest.toml
+/Manifest.toml
+/docs/build/
+*.pdf
+.DS_Store
+.vscode/
+git
+
+# Future Extension 
+src/new_pelt.jl

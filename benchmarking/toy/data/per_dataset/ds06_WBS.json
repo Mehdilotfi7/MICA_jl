@@ -1,0 +1,53 @@
+[
+  {
+    "method": "WBS",
+    "f1": 0.4,
+    "precision": 0.25,
+    "recall": 1.0,
+    "covering": 0.99,
+    "cps": [
+      98,
+      107,
+      118,
+      152,
+      159,
+      168,
+      193,
+      199
+    ],
+    "config": "default",
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 300,
+    "true_cps": [
+      100,
+      200
+    ]
+  },
+  {
+    "method": "WBS",
+    "f1": 0.4444444444444445,
+    "precision": 0.2857142857142857,
+    "recall": 1.0,
+    "covering": 0.9866666666666667,
+    "cps": [
+      97,
+      107,
+      118,
+      156,
+      168,
+      193,
+      199
+    ],
+    "config": "oracle",
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 0.0,
+    "n": 300,
+    "true_cps": [
+      100,
+      200
+    ]
+  }
+]

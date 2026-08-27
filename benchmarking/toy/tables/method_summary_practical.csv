@@ -1,0 +1,17 @@
+method,f1,precision,recall,covering,mode
+WBS,0.2047,0.129,0.6111,0.729,practical
+BOCPDMS,0.2011,0.1444,0.3333,0.3307,practical
+HMM-Regime,0.1598,0.1017,0.5,0.753,practical
+RFPOP,0.1494,0.0966,0.3333,0.3307,practical
+PROPHET,0.1438,0.1093,0.25,0.4466,practical
+CPNP,0.0786,0.048,0.2222,0.2193,practical
+BOCPD,0.0741,0.1111,0.0556,0.0741,practical
+KCPA,0.026,0.0132,1.0,1.0,practical
+ECP,0.0,0.0,0.0,0.0,practical
+AMOC,0.0,0.0,0.0,0.0,practical
+BinSeg,0.0,0.0,0.0,0.0,practical
+RBOCPDMS,0.0,0.0,0.0,0.0,practical
+PELT,0.0,0.0,0.0,0.0,practical
+SegNeigh,0.0,0.0,0.0,0.0,practical
+ZERO,0.0,0.0,0.0,0.3079,practical
+MICA-P-TCPD,0.4607,0.4515,0.7222,0.8701,practical

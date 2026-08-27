@@ -1,0 +1,26 @@
+[
+  {
+    "objective": "aic",
+    "n_cps": 3,
+    "cps": [30, 60, 90],
+    "time_seconds": 4472.9
+  },
+  {
+    "objective": "bic",
+    "n_cps": 2,
+    "cps": [60, 90],
+    "time_seconds": 4305.4
+  },
+  {
+    "objective": "mdl",
+    "n_cps": 2,
+    "cps": [60, 90],
+    "time_seconds": 4306.3
+  },
+  {
+    "objective": "none",
+    "n_cps": 6,
+    "cps": [40, 60, 70, 90, 260, 340],
+    "time_seconds": 6196.7
+  }
+]

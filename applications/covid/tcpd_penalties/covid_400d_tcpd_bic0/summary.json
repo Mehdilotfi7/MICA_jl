@@ -1,0 +1,40 @@
+{
+  "cps": [
+    40,
+    60,
+    80,
+    120,
+    150,
+    260,
+    290,
+    320
+  ],
+  "data_indices": [
+    5,
+    6,
+    7,
+    9,
+    11
+  ],
+  "error": null,
+  "ga_settings": {
+    "crossover": "SBX(0.7, 1)",
+    "crossoverRate": 0.7,
+    "iterations": 1000,
+    "min_length": 10,
+    "mutation": "gaussian(0.0001)",
+    "mutationRate": 0.7,
+    "populationSize": 150,
+    "selection": "tournament(2)",
+    "step": 10
+  },
+  "loss": 271.4241449017804,
+  "min_length": 10,
+  "n_cps": 8,
+  "objective": "tcpd_bic0",
+  "penalty_label": "tcpd_bic0",
+  "raw_loss": 699.3809722362616,
+  "seed": 1234,
+  "step": 10,
+  "time_seconds": 16362.723266839981
+}

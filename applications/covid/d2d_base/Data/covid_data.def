@@ -1,0 +1,13 @@
+DESCRIPTION
+COVID-19 Germany daily data for D2D (log10(obs+1))
+
+PREDICTOR
+t	T	"d"	"time"	0	400
+
+INPUTS
+
+OBSERVABLES
+
+ERRORS
+
+CONDITIONS

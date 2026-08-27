@@ -1,0 +1,32 @@
+# Manuscript and response materials (not part of public code release)
+manuscript/
+response/
+figures/
+
+# Synthetic ODE PLE experiments (excluded from public release)
+ple/synthetic_ode/
+
+# Cluster/runtime artifacts that contain local paths or institutional infrastructure
+*.slurm
+*.log
+sync_cluster_ple.sh
+MANUSCRIPT_DECISIONS.md
+codes/**/Manifest.toml
+
+# Julia build artifacts
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+*.so
+*.dylib
+*.dll
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+*~

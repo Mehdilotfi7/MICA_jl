@@ -1,0 +1,42 @@
+[
+  {
+    "method": "ECP",
+    "f1": 0.0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "covering": 0.0,
+    "cps": [],
+    "config": "default",
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 0.5,
+    "n": 300,
+    "true_cps": [
+      100,
+      200
+    ]
+  },
+  {
+    "method": "ECP",
+    "f1": 0.5714285714285715,
+    "precision": 0.4,
+    "recall": 1.0,
+    "covering": 0.9866666666666667,
+    "cps": [
+      100,
+      120,
+      157,
+      169,
+      196
+    ],
+    "config": "oracle",
+    "model": "AR",
+    "seed": 1,
+    "noise_level": 0.5,
+    "n": 300,
+    "true_cps": [
+      100,
+      200
+    ]
+  }
+]
