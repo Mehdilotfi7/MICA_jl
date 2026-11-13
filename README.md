@@ -89,6 +89,15 @@ Run the profile-likelihood analysis (conditional or joint):
 julia applications/covid/ple/scripts/covid_ple_bobyqa.jl
 ```
 
+Run the GA multi-seed stability analysis (standard and high budget) and
+generate the summary rugplot:
+
+```bash
+julia applications/covid/scripts/run_covid_bic_multiseed.jl
+julia applications/covid/scripts/run_covid_bic_multiseed_set2.jl
+python applications/covid/scripts/summarize_covid_stability_ga_only.py
+```
+
 Benchmark MICA against standard CPD methods on the case-number series:
 
 ```bash
@@ -157,17 +166,39 @@ R and Python baseline wrappers are in `benchmarking/tcpd/competitor_scripts/`.
 
 ### 5. Profile-likelihood / identifiability
 
-COVID PLE plotting:
+PLE figures are generated with Julia/Plots.jl (no Python step). Toy-SIRD
+conditional and joint PLE figures (including change-point profiles):
 
 ```bash
-python applications/covid/ple/plot_covid_ple.py
+julia applications/toy_sird_sensitivity/scripts/plot_dualobs_ple.jl
 ```
 
-Wind-turbine PLE plotting:
+COVID-19 PLE figures:
 
 ```bash
-python applications/wind_turbine/ple/plot_turbine_ple.py
+julia applications/covid/scripts/visualise_ple_results.jl <results_folder>
 ```
+
+### 6. Toy-SIRD SP/NSP sensitivity study
+
+Run the four-configuration (M1-M4) detection experiment on the two-channel
+toy-SIRD benchmark (36 fits; parallel over threads):
+
+```bash
+julia applications/toy_sird_sensitivity/scripts/run_sird_complexity_dualobs.jl
+```
+
+Run the profile-likelihood analysis (conditional or joint mode) and generate
+all figures (summary, example fits, parameter trajectories, PLE curves):
+
+```bash
+julia applications/toy_sird_sensitivity/scripts/run_sird_ple_dualobs.jl
+julia applications/toy_sird_sensitivity/scripts/plot_dualobs_summary.jl
+julia applications/toy_sird_sensitivity/scripts/plot_dualobs_selected.jl
+julia applications/toy_sird_sensitivity/scripts/plot_dualobs_ple.jl
+```
+
+These scripts use `codes/Mica.jl` and `codes/BreakpointProfiles_v2.jl`.
 
 ## Notes on reproducibility
 
