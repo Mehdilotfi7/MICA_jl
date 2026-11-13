@@ -1,0 +1,38 @@
+name = "BreakpointProfiles"
+uuid = "781e6dd1-d25d-4a40-935c-45726c4a1f7d"
+version = "0.1.0"
+authors = ["Mehdi Lotfi"]
+
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+OrdinaryDiffEq = "1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"
+Distributed = "8ba89e20-285c-5b6f-9357-94700520ee1b"
+Evolutionary = "86b6b26d-c046-49b6-aa0b-5f0f74682bd6"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Metaheuristics = "bcdb8e00-2c21-11e9-3065-2b553b22f898"
+NLopt = "76087f3c-5699-56af-9a33-bf431cd00edd"
+Optim = "429524aa-4258-5aef-a3af-852621145aeb"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+Statistics = "10745b16-79ce-11e8-11f9-7d13ad32a3b2"
+
+[compat]
+CSV = "0.10"
+DataFrames = "1"
+OrdinaryDiffEq = "6"
+Documenter = "1"
+Evolutionary = "0.11"
+Metaheuristics = "3"
+NLopt = "1"
+Optim = "2.0.1"
+Statistics = "1"
+julia = "1.6"
+
+[extras]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+docs = ["Documenter"]
+test = ["Test"]

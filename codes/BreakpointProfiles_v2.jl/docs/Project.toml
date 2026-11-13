@@ -1,0 +1,6 @@
+[deps]
+BreakpointProfiles = "781e6dd1-d25d-4a40-935c-45726c4a1f7d"
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+
+[compat]
+Documenter = "1"

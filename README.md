@@ -17,7 +17,8 @@ The profile-likelihood methods in this repository (implemented in `codes/Breakpo
 MICA_jl/
 ├── codes/
 │   ├── Mica.jl/                # Main MICA Julia package
-│   └── BreakpointProfiles.jl/  # Profile-likelihood / changepoint-profile engine
+│   ├── BreakpointProfiles.jl/  # Profile-likelihood / changepoint-profile engine
+│   └── BreakpointProfiles_v2.jl/  # Extended copy with improved joint-profile pipeline (used by toy_sird_sensitivity)
 ├── applications/
 │   ├── covid/                  # COVID-19 SEIRD case study
 │   │   ├── scripts/            # BIC/MDL/AIC runs, PLE, CPD benchmark, plotting
@@ -26,6 +27,9 @@ MICA_jl/
 │   │   ├── ple/                # Profile-likelihood outputs
 │   │   ├── d2d_base/           # Data2Dynamics baseline (MATLAB) model/data
 │   │   └── identifiability/    # Structural-identifiability analysis
+│   ├── toy_sird_sensitivity/   # Toy-SIRD SP/NSP sensitivity study (two-channel observation)
+│   │   ├── scripts/            # Detection runs, PLE (conditional/joint), plotting
+│   │   └── results/            # Fit metrics (JSON), PLE profiles (CSV), summary tables
 │   └── wind_turbine/           # Wind-turbine power-curve case study
 │       ├── scripts/            # Objective/kappa runs, PLE, plotting
 │       ├── results/            # Detected CPs, parameters, visualizations

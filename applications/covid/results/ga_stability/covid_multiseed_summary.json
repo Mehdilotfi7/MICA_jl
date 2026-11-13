@@ -1,0 +1,331 @@
+[
+  {
+    "bic": 513.0105360000554,
+    "cps": [
+      60,
+      150
+    ],
+    "data_indices": [
+      5,
+      6,
+      7,
+      9,
+      11
+    ],
+    "ga_settings": {
+      "crossover": "SBX(0.7, 1)",
+      "crossoverRate": 0.7,
+      "iterations": 1000,
+      "min_length": 10,
+      "mutation": "gaussian(0.0001)",
+      "mutationRate": 0.7,
+      "populationSize": 150,
+      "selection": "tournament(2)",
+      "step": 10
+    },
+    "min_length": 10,
+    "n_cps": 2,
+    "objective": "bic",
+    "penalty_label": "bic",
+    "raw_loss": 866.7203715580496,
+    "seed": 1234,
+    "step": 10,
+    "time_seconds": 10529.723798036575
+  },
+  {
+    "bic": 569.2336780680323,
+    "cps": [
+      70,
+      130
+    ],
+    "data_indices": [
+      5,
+      6,
+      7,
+      9,
+      11
+    ],
+    "ga_settings": {
+      "crossover": "SBX(0.7, 1)",
+      "crossoverRate": 0.7,
+      "iterations": 1000,
+      "min_length": 10,
+      "mutation": "gaussian(0.0001)",
+      "mutationRate": 0.7,
+      "populationSize": 150,
+      "selection": "tournament(2)",
+      "step": 10
+    },
+    "min_length": 10,
+    "n_cps": 2,
+    "objective": "bic",
+    "penalty_label": "bic",
+    "raw_loss": 997.522051986092,
+    "seed": 42,
+    "step": 10,
+    "time_seconds": 10563.634608983994
+  },
+  {
+    "bic": 525.1098722796643,
+    "cps": [
+      60,
+      260
+    ],
+    "data_indices": [
+      5,
+      6,
+      7,
+      9,
+      11
+    ],
+    "ga_settings": {
+      "crossover": "SBX(0.7, 1)",
+      "crossoverRate": 0.7,
+      "iterations": 1000,
+      "min_length": 10,
+      "mutation": "gaussian(0.0001)",
+      "mutationRate": 0.7,
+      "populationSize": 150,
+      "selection": "tournament(2)",
+      "step": 10
+    },
+    "min_length": 10,
+    "n_cps": 2,
+    "objective": "bic",
+    "penalty_label": "bic",
+    "raw_loss": 893.3377611207532,
+    "seed": 2025,
+    "step": 10,
+    "time_seconds": 10406.148185014725
+  },
+  {
+    "bic": 531.9518678289071,
+    "cps": [
+      40,
+      70
+    ],
+    "data_indices": [
+      5,
+      6,
+      7,
+      9,
+      11
+    ],
+    "ga_settings": {
+      "crossover": "SBX(0.7, 1)",
+      "crossoverRate": 0.7,
+      "iterations": 1000,
+      "min_length": 10,
+      "mutation": "gaussian(0.0001)",
+      "mutationRate": 0.7,
+      "populationSize": 150,
+      "selection": "tournament(2)",
+      "step": 10
+    },
+    "min_length": 10,
+    "n_cps": 2,
+    "objective": "bic",
+    "penalty_label": "bic",
+    "raw_loss": 908.7497285821714,
+    "seed": 9999,
+    "step": 10,
+    "time_seconds": 11192.977303028107
+  },
+  {
+    "bic": 523.2768256015302,
+    "cps": [
+      60,
+      250
+    ],
+    "data_indices": [
+      5,
+      6,
+      7,
+      9,
+      11
+    ],
+    "ga_settings": {
+      "crossover": "SBX(0.7, 1)",
+      "crossoverRate": 0.7,
+      "iterations": 1000,
+      "min_length": 10,
+      "mutation": "gaussian(0.0001)",
+      "mutationRate": 0.7,
+      "populationSize": 150,
+      "selection": "tournament(2)",
+      "step": 10
+    },
+    "min_length": 10,
+    "n_cps": 2,
+    "objective": "bic",
+    "penalty_label": "bic",
+    "raw_loss": 889.2533024841655,
+    "seed": 12345,
+    "step": 10,
+    "time_seconds": 10458.761091947556
+  },
+  {
+    "bic": 538.0075809834382,
+    "cps": [
+      200
+    ],
+    "data_indices": [
+      5,
+      6,
+      7,
+      9,
+      11
+    ],
+    "ga_settings": {
+      "crossover": "SBX(0.7, 1)",
+      "crossoverRate": 0.7,
+      "iterations": 1000,
+      "min_length": 10,
+      "mutation": "gaussian(0.0001)",
+      "mutationRate": 0.7,
+      "populationSize": 150,
+      "selection": "tournament(2)",
+      "step": 10
+    },
+    "min_length": 10,
+    "n_cps": 1,
+    "objective": "bic",
+    "penalty_label": "bic",
+    "raw_loss": 1055.7608442533433,
+    "seed": 7,
+    "step": 10,
+    "time_seconds": 7611.505495071411
+  },
+  {
+    "bic": 529.2708126411219,
+    "cps": [
+      60,
+      260
+    ],
+    "data_indices": [
+      5,
+      6,
+      7,
+      9,
+      11
+    ],
+    "ga_settings": {
+      "crossover": "SBX(0.7, 1)",
+      "crossoverRate": 0.7,
+      "iterations": 1000,
+      "min_length": 10,
+      "mutation": "gaussian(0.0001)",
+      "mutationRate": 0.7,
+      "populationSize": 150,
+      "selection": "tournament(2)",
+      "step": 10
+    },
+    "min_length": 10,
+    "n_cps": 2,
+    "objective": "bic",
+    "penalty_label": "bic",
+    "raw_loss": 902.6790755685023,
+    "seed": 31415,
+    "step": 10,
+    "time_seconds": 10530.759267091751
+  },
+  {
+    "bic": 512.6126452881905,
+    "cps": [
+      60,
+      190
+    ],
+    "data_indices": [
+      5,
+      6,
+      7,
+      9,
+      11
+    ],
+    "ga_settings": {
+      "crossover": "SBX(0.7, 1)",
+      "crossoverRate": 0.7,
+      "iterations": 1000,
+      "min_length": 10,
+      "mutation": "gaussian(0.0001)",
+      "mutationRate": 0.7,
+      "populationSize": 150,
+      "selection": "tournament(2)",
+      "step": 10
+    },
+    "min_length": 10,
+    "n_cps": 2,
+    "objective": "bic",
+    "penalty_label": "bic",
+    "raw_loss": 865.8586502536658,
+    "seed": 271828,
+    "step": 10,
+    "time_seconds": 10613.602675914764
+  },
+  {
+    "bic": 509.25902260900324,
+    "cps": [
+      60,
+      200
+    ],
+    "data_indices": [
+      5,
+      6,
+      7,
+      9,
+      11
+    ],
+    "ga_settings": {
+      "crossover": "SBX(0.7, 1)",
+      "crossoverRate": 0.7,
+      "iterations": 1000,
+      "min_length": 10,
+      "mutation": "gaussian(0.0001)",
+      "mutationRate": 0.7,
+      "populationSize": 150,
+      "selection": "tournament(2)",
+      "step": 10
+    },
+    "min_length": 10,
+    "n_cps": 2,
+    "objective": "bic",
+    "penalty_label": "bic",
+    "raw_loss": 858.6295890127974,
+    "seed": 161803,
+    "step": 10,
+    "time_seconds": 10582.582051992416
+  },
+  {
+    "bic": 523.7868344078536,
+    "cps": [
+      60,
+      260
+    ],
+    "data_indices": [
+      5,
+      6,
+      7,
+      9,
+      11
+    ],
+    "ga_settings": {
+      "crossover": "SBX(0.7, 1)",
+      "crossoverRate": 0.7,
+      "iterations": 1000,
+      "min_length": 10,
+      "mutation": "gaussian(0.0001)",
+      "mutationRate": 0.7,
+      "populationSize": 150,
+      "selection": "tournament(2)",
+      "step": 10
+    },
+    "min_length": 10,
+    "n_cps": 2,
+    "objective": "bic",
+    "penalty_label": "bic",
+    "raw_loss": 890.387843150927,
+    "seed": 5555,
+    "step": 10,
+    "time_seconds": 10458.385895967484
+  }
+]
