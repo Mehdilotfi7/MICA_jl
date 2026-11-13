@@ -2,8 +2,7 @@
 
 This repository contains the source code, data, scripts, and results for the paper:
 
-> **MICA: Model-Informed Change-point Analysis**  
-> PLOS Computational Biology
+> **MICA: Model-Informed Change-point Analysis**
 
 ## Repository overview
 
